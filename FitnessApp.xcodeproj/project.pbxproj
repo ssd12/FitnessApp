@@ -1,0 +1,978 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0507A4F86CA1880040BACAB9 /* Pods_FitnessApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD18C673F66082B7DB84192 /* Pods_FitnessApp.framework */; };
+		5C04D49423049B8000D2AAEA /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04D49323049B8000D2AAEA /* Stopwatch.swift */; };
+		5C06D1C0230AE81400F74682 /* ActivitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06D1BF230AE81400F74682 /* ActivitySelectionViewController.swift */; };
+		5C06D1C4230AE95200F74682 /* ActivitySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C06D1C3230AE95200F74682 /* ActivitySelectionViewController.xib */; };
+		5C08AEE322FC85CE00AED57B /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C08AEE222FC85CE00AED57B /* RegistrationViewModel.swift */; };
+		5C08AEE522FCBC7200AED57B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C08AEE422FCBC7200AED57B /* RegistrationViewController.swift */; };
+		5C08AEE722FCD58A00AED57B /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C08AEE622FCD58A00AED57B /* RegistrationViewController.xib */; };
+		5C0B53B8211B7ED00027BE8B /* mainNavigiationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0B53B7211B7ED00027BE8B /* mainNavigiationController.swift */; };
+		5C0DE00C22C43E4B0085DFF1 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DE00B22C43E4B0085DFF1 /* HomeScreenViewController.swift */; };
+		5C0ED34C230C5B2100F20832 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ED34B230C5B2100F20832 /* UserCredentials.swift */; };
+		5C0ED34F230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ED34D230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld */; };
+		5C0ED352230F2EF700F20832 /* UserSettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0ED351230F2EF700F20832 /* UserSettingsPageViewController.swift */; };
+		5C0ED354230F2F2000F20832 /* UserSettingsPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0ED353230F2F2000F20832 /* UserSettingsPageViewController.xib */; };
+		5C22BC0D22C80C5E008C1C2D /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */; };
+		5C22BC1322C8132C008C1C2D /* IntervalRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */; };
+		5C26822522D4F94800A71C10 /* IntervalRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */; };
+		5C26822722D4FB2000A71C10 /* IntervalRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */; };
+		5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */; };
+		5C26BB6122DF8D4D0041061F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26BB6022DF8D4D0041061F /* Location.swift */; };
+		5C282E3222A4A277007A4E4C /* FreeRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C282E3122A4A277007A4E4C /* FreeRideViewController.swift */; };
+		5C282E3422A4A698007A4E4C /* FreeRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C282E3322A4A698007A4E4C /* FreeRideViewModel.swift */; };
+		5C7BFB3F21128E7C004DE4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB3E21128E7C004DE4F2 /* AppDelegate.swift */; };
+		5C7BFB4121128E7C004DE4F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4021128E7C004DE4F2 /* ViewController.swift */; };
+		5C7BFB4421128E7C004DE4F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4221128E7C004DE4F2 /* Main.storyboard */; };
+		5C7BFB4721128E7C004DE4F2 /* BikeRideApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */; };
+		5C7BFB4921128E83004DE4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4821128E83004DE4F2 /* Assets.xcassets */; };
+		5C7BFB4C21128E83004DE4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4A21128E83004DE4F2 /* LaunchScreen.storyboard */; };
+		5C7BFB5721128E84004DE4F2 /* FitnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB5621128E84004DE4F2 /* FitnessAppTests.swift */; };
+		5C7BFB6221128E84004DE4F2 /* FitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */; };
+		5C7BFB722118F73E004DE4F2 /* SingleDistanceRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB712118F73E004DE4F2 /* SingleDistanceRide.swift */; };
+		5C7BFB7621192E5A004DE4F2 /* WorkoutRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB7521192E5A004DE4F2 /* WorkoutRide.swift */; };
+		5C7BFB7821194090004DE4F2 /* SingleRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB7721194090004DE4F2 /* SingleRideViewController.swift */; };
+		5C7BFB7A211954A5004DE4F2 /* WorkoutRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB79211954A5004DE4F2 /* WorkoutRideViewController.swift */; };
+		5C7BFB7C21195504004DE4F2 /* savedRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB7B21195504004DE4F2 /* savedRideViewController.swift */; };
+		5C7C39C922DA6F4D00444733 /* SavedWorkoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C39C822DA6F4D00444733 /* SavedWorkoutsViewModel.swift */; };
+		5C7C39D022DA943800444733 /* SavedWorkoutsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C39CF22DA943800444733 /* SavedWorkoutsViewController.xib */; };
+		5C7C39D222DA955E00444733 /* SavedWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C39D122DA955E00444733 /* SavedWorkoutsViewController.swift */; };
+		5C7C5B25211E62CC00FA2326 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C5B24211E62CC00FA2326 /* CoreData.framework */; };
+		5C8132E222CE553200C58AEC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8132E122CE553200C58AEC /* Utilities.swift */; };
+		5CA5F8AC21BC27A00034687A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA5F8AB21BC27A00034687A /* MapKit.framework */; };
+		5CAF726421EA980E009D5D66 /* WorkoutRideProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF726321EA980E009D5D66 /* WorkoutRideProtocol.swift */; };
+		5CAF726621EA9927009D5D66 /* SingleDistanceRideProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF726521EA9927009D5D66 /* SingleDistanceRideProtocol.swift */; };
+		5CB54CAC22F37B8400A107F6 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */; };
+		5CB54CB122F5B34E00A107F6 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */; };
+		5CB54CB322F5B40B00A107F6 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */; };
+		5CB54CB522F5C33600A107F6 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C7BFB5321128E84004DE4F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7BFB3321128E7C004DE4F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7BFB3A21128E7C004DE4F2;
+			remoteInfo = BikeRideApp;
+		};
+		5C7BFB5E21128E84004DE4F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7BFB3321128E7C004DE4F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7BFB3A21128E7C004DE4F2;
+			remoteInfo = BikeRideApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27F4AE2C2830CE2453D3797D /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
+		2DD18C673F66082B7DB84192 /* Pods_FitnessApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C04D49323049B8000D2AAEA /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		5C06D1BF230AE81400F74682 /* ActivitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionViewController.swift; sourceTree = "<group>"; };
+		5C06D1C3230AE95200F74682 /* ActivitySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySelectionViewController.xib; sourceTree = "<group>"; };
+		5C08AEE222FC85CE00AED57B /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		5C08AEE422FCBC7200AED57B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		5C08AEE622FCD58A00AED57B /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		5C0B53B7211B7ED00027BE8B /* mainNavigiationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainNavigiationController.swift; sourceTree = "<group>"; };
+		5C0DE00B22C43E4B0085DFF1 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		5C0ED34B230C5B2100F20832 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
+		5C0ED34E230DD8F100F20832 /* FitnessAppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitnessAppDataModel.xcdatamodel; sourceTree = "<group>"; };
+		5C0ED351230F2EF700F20832 /* UserSettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsPageViewController.swift; sourceTree = "<group>"; };
+		5C0ED353230F2F2000F20832 /* UserSettingsPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSettingsPageViewController.xib; sourceTree = "<group>"; };
+		5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
+		5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewModel.swift; sourceTree = "<group>"; };
+		5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewController.swift; sourceTree = "<group>"; };
+		5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntervalRideViewController.xib; sourceTree = "<group>"; };
+		5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeRideViewController.xib; sourceTree = "<group>"; };
+		5C26BB6022DF8D4D0041061F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5C282E3122A4A277007A4E4C /* FreeRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRideViewController.swift; sourceTree = "<group>"; };
+		5C282E3322A4A698007A4E4C /* FreeRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRideViewModel.swift; sourceTree = "<group>"; };
+		5C7BFB3B21128E7C004DE4F2 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7BFB3E21128E7C004DE4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C7BFB4021128E7C004DE4F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C7BFB4321128E7C004DE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C7BFB4621128E7C004DE4F2 /* BikeRideApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BikeRideApp.xcdatamodel; sourceTree = "<group>"; };
+		5C7BFB4821128E83004DE4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C7BFB4B21128E83004DE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C7BFB4D21128E83004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7BFB5221128E84004DE4F2 /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7BFB5621128E84004DE4F2 /* FitnessAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppTests.swift; sourceTree = "<group>"; };
+		5C7BFB5821128E84004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7BFB5D21128E84004DE4F2 /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITests.swift; sourceTree = "<group>"; };
+		5C7BFB6321128E84004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7BFB712118F73E004DE4F2 /* SingleDistanceRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDistanceRide.swift; sourceTree = "<group>"; };
+		5C7BFB7521192E5A004DE4F2 /* WorkoutRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRide.swift; sourceTree = "<group>"; };
+		5C7BFB7721194090004DE4F2 /* SingleRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRideViewController.swift; sourceTree = "<group>"; };
+		5C7BFB79211954A5004DE4F2 /* WorkoutRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRideViewController.swift; sourceTree = "<group>"; };
+		5C7BFB7B21195504004DE4F2 /* savedRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savedRideViewController.swift; sourceTree = "<group>"; };
+		5C7C39C822DA6F4D00444733 /* SavedWorkoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkoutsViewModel.swift; sourceTree = "<group>"; };
+		5C7C39CF22DA943800444733 /* SavedWorkoutsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedWorkoutsViewController.xib; sourceTree = "<group>"; };
+		5C7C39D122DA955E00444733 /* SavedWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkoutsViewController.swift; sourceTree = "<group>"; };
+		5C7C5B24211E62CC00FA2326 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5C8132E122CE553200C58AEC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		5CA5F8AB21BC27A00034687A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5CAF726321EA980E009D5D66 /* WorkoutRideProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRideProtocol.swift; sourceTree = "<group>"; };
+		5CAF726521EA9927009D5D66 /* SingleDistanceRideProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDistanceRideProtocol.swift; sourceTree = "<group>"; };
+		5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
+		5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		C49198E77FA9BDAF78702593 /* Pods-FitnessApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.debug.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C7BFB3821128E7C004DE4F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA5F8AC21BC27A00034687A /* MapKit.framework in Frameworks */,
+				5C7C5B25211E62CC00FA2326 /* CoreData.framework in Frameworks */,
+				0507A4F86CA1880040BACAB9 /* Pods_FitnessApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BFB4F21128E84004DE4F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BFB5A21128E84004DE4F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C06D1BE230AE7D200F74682 /* ActivitySelection */ = {
+			isa = PBXGroup;
+			children = (
+				5C06D1BF230AE81400F74682 /* ActivitySelectionViewController.swift */,
+				5C06D1C3230AE95200F74682 /* ActivitySelectionViewController.xib */,
+			);
+			path = ActivitySelection;
+			sourceTree = "<group>";
+		};
+		5C08AEE122FC80D600AED57B /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				5C08AEE222FC85CE00AED57B /* RegistrationViewModel.swift */,
+				5C08AEE422FCBC7200AED57B /* RegistrationViewController.swift */,
+				5C08AEE622FCD58A00AED57B /* RegistrationViewController.xib */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		5C0DE00A22C43E110085DFF1 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5C0DE00B22C43E4B0085DFF1 /* HomeScreenViewController.swift */,
+				5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		5C0ED34A230C5B0600F20832 /* UserCredentials */ = {
+			isa = PBXGroup;
+			children = (
+				5C0ED34B230C5B2100F20832 /* UserCredentials.swift */,
+			);
+			path = UserCredentials;
+			sourceTree = "<group>";
+		};
+		5C0ED350230F2EB500F20832 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5C0ED351230F2EF700F20832 /* UserSettingsPageViewController.swift */,
+				5C0ED353230F2F2000F20832 /* UserSettingsPageViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5C22BC1422C94607008C1C2D /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5C26BB6022DF8D4D0041061F /* Location.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		5C282E2F22A4849E007A4E4C /* FreeRide */ = {
+			isa = PBXGroup;
+			children = (
+				5C282E3122A4A277007A4E4C /* FreeRideViewController.swift */,
+				5C282E3322A4A698007A4E4C /* FreeRideViewModel.swift */,
+				5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */,
+				5C04D49323049B8000D2AAEA /* Stopwatch.swift */,
+			);
+			path = FreeRide;
+			sourceTree = "<group>";
+		};
+		5C282E3022A484B2007A4E4C /* IntervalRide */ = {
+			isa = PBXGroup;
+			children = (
+				5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */,
+				5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */,
+				5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */,
+			);
+			path = IntervalRide;
+			sourceTree = "<group>";
+		};
+		5C7BFB3221128E7C004DE4F2 = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB3D21128E7C004DE4F2 /* FitnessApp */,
+				5C7BFB5521128E84004DE4F2 /* FitnessAppTests */,
+				5C7BFB6021128E84004DE4F2 /* FitnessAppUITests */,
+				5C7BFB3C21128E7C004DE4F2 /* Products */,
+				5C7C5B23211E62CC00FA2326 /* Frameworks */,
+				6C5F0C638021083A62BDB5E2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		5C7BFB3C21128E7C004DE4F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB3B21128E7C004DE4F2 /* FitnessApp.app */,
+				5C7BFB5221128E84004DE4F2 /* FitnessAppTests.xctest */,
+				5C7BFB5D21128E84004DE4F2 /* FitnessAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C7BFB3D21128E7C004DE4F2 /* FitnessApp */ = {
+			isa = PBXGroup;
+			children = (
+				5C0ED350230F2EB500F20832 /* Settings */,
+				5C0ED34A230C5B0600F20832 /* UserCredentials */,
+				5C06D1BE230AE7D200F74682 /* ActivitySelection */,
+				5C08AEE122FC80D600AED57B /* Registration */,
+				5CB54CAF22F5B32D00A107F6 /* LoginScreen */,
+				5CB54CAA22F37B6000A107F6 /* Networking */,
+				5C7C39CA22DA6F5300444733 /* SavedRides */,
+				5C8132E022CE52D500C58AEC /* Utilities */,
+				5C22BC1422C94607008C1C2D /* Location */,
+				5C0DE00A22C43E110085DFF1 /* HomeScreen */,
+				5C282E3022A484B2007A4E4C /* IntervalRide */,
+				5C282E2F22A4849E007A4E4C /* FreeRide */,
+				5CAF725B21EA5B10009D5D66 /* database */,
+				5CAF725A21EA50FF009D5D66 /* Views */,
+				5CAF725921EA50F6009D5D66 /* Protocols */,
+				5CAF725821EA50DA009D5D66 /* Models */,
+				5CAF725721EA50D3009D5D66 /* Controllers */,
+				5C7BFB3E21128E7C004DE4F2 /* AppDelegate.swift */,
+				5C7BFB4821128E83004DE4F2 /* Assets.xcassets */,
+				5C7BFB4D21128E83004DE4F2 /* Info.plist */,
+			);
+			path = FitnessApp;
+			sourceTree = "<group>";
+		};
+		5C7BFB5521128E84004DE4F2 /* FitnessAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB5621128E84004DE4F2 /* FitnessAppTests.swift */,
+				5C7BFB5821128E84004DE4F2 /* Info.plist */,
+			);
+			path = FitnessAppTests;
+			sourceTree = "<group>";
+		};
+		5C7BFB6021128E84004DE4F2 /* FitnessAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */,
+				5C7BFB6321128E84004DE4F2 /* Info.plist */,
+			);
+			path = FitnessAppUITests;
+			sourceTree = "<group>";
+		};
+		5C7C39CA22DA6F5300444733 /* SavedRides */ = {
+			isa = PBXGroup;
+			children = (
+				5C7C39C822DA6F4D00444733 /* SavedWorkoutsViewModel.swift */,
+				5C7C39CF22DA943800444733 /* SavedWorkoutsViewController.xib */,
+				5C7C39D122DA955E00444733 /* SavedWorkoutsViewController.swift */,
+			);
+			path = SavedRides;
+			sourceTree = "<group>";
+		};
+		5C7C5B23211E62CC00FA2326 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CA5F8AB21BC27A00034687A /* MapKit.framework */,
+				5C7C5B24211E62CC00FA2326 /* CoreData.framework */,
+				2DD18C673F66082B7DB84192 /* Pods_FitnessApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C8132E022CE52D500C58AEC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5C8132E122CE553200C58AEC /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5CAF725721EA50D3009D5D66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB4021128E7C004DE4F2 /* ViewController.swift */,
+				5C7BFB7721194090004DE4F2 /* SingleRideViewController.swift */,
+				5C7BFB79211954A5004DE4F2 /* WorkoutRideViewController.swift */,
+				5C7BFB7B21195504004DE4F2 /* savedRideViewController.swift */,
+				5C0B53B7211B7ED00027BE8B /* mainNavigiationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5CAF725821EA50DA009D5D66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB712118F73E004DE4F2 /* SingleDistanceRide.swift */,
+				5C7BFB7521192E5A004DE4F2 /* WorkoutRide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5CAF725921EA50F6009D5D66 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5CAF726521EA9927009D5D66 /* SingleDistanceRideProtocol.swift */,
+				5CAF726321EA980E009D5D66 /* WorkoutRideProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5CAF725A21EA50FF009D5D66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB4A21128E83004DE4F2 /* LaunchScreen.storyboard */,
+				5C7BFB4221128E7C004DE4F2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5CAF725B21EA5B10009D5D66 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */,
+				5C0ED34D230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		5CB54CAA22F37B6000A107F6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5CB54CAF22F5B32D00A107F6 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */,
+				5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */,
+				5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		6C5F0C638021083A62BDB5E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C49198E77FA9BDAF78702593 /* Pods-FitnessApp.debug.xcconfig */,
+				27F4AE2C2830CE2453D3797D /* Pods-FitnessApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C7BFB3A21128E7C004DE4F2 /* FitnessApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7BFB6621128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessApp" */;
+			buildPhases = (
+				3E362064ABABB3378025477B /* [CP] Check Pods Manifest.lock */,
+				5C7BFB3721128E7C004DE4F2 /* Sources */,
+				5C7BFB3821128E7C004DE4F2 /* Frameworks */,
+				5C7BFB3921128E7C004DE4F2 /* Resources */,
+				F24AA8C1E7721120A1A3F169 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitnessApp;
+			productName = BikeRideApp;
+			productReference = 5C7BFB3B21128E7C004DE4F2 /* FitnessApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C7BFB5121128E84004DE4F2 /* FitnessAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7BFB6921128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessAppTests" */;
+			buildPhases = (
+				5C7BFB4E21128E84004DE4F2 /* Sources */,
+				5C7BFB4F21128E84004DE4F2 /* Frameworks */,
+				5C7BFB5021128E84004DE4F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7BFB5421128E84004DE4F2 /* PBXTargetDependency */,
+			);
+			name = FitnessAppTests;
+			productName = BikeRideAppTests;
+			productReference = 5C7BFB5221128E84004DE4F2 /* FitnessAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C7BFB5C21128E84004DE4F2 /* FitnessAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7BFB6C21128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessAppUITests" */;
+			buildPhases = (
+				5C7BFB5921128E84004DE4F2 /* Sources */,
+				5C7BFB5A21128E84004DE4F2 /* Frameworks */,
+				5C7BFB5B21128E84004DE4F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7BFB5F21128E84004DE4F2 /* PBXTargetDependency */,
+			);
+			name = FitnessAppUITests;
+			productName = BikeRideAppUITests;
+			productReference = 5C7BFB5D21128E84004DE4F2 /* FitnessAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C7BFB3321128E7C004DE4F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Simran Dhillon";
+				TargetAttributes = {
+					5C7BFB3A21128E7C004DE4F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					5C7BFB5121128E84004DE4F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 5C7BFB3A21128E7C004DE4F2;
+					};
+					5C7BFB5C21128E84004DE4F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 5C7BFB3A21128E7C004DE4F2;
+					};
+				};
+			};
+			buildConfigurationList = 5C7BFB3621128E7C004DE4F2 /* Build configuration list for PBXProject "FitnessApp" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C7BFB3221128E7C004DE4F2;
+			productRefGroup = 5C7BFB3C21128E7C004DE4F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C7BFB3A21128E7C004DE4F2 /* FitnessApp */,
+				5C7BFB5121128E84004DE4F2 /* FitnessAppTests */,
+				5C7BFB5C21128E84004DE4F2 /* FitnessAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C7BFB3921128E7C004DE4F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C22BC0D22C80C5E008C1C2D /* HomeScreenViewController.xib in Resources */,
+				5C26822722D4FB2000A71C10 /* IntervalRideViewController.xib in Resources */,
+				5C0ED354230F2F2000F20832 /* UserSettingsPageViewController.xib in Resources */,
+				5C7BFB4C21128E83004DE4F2 /* LaunchScreen.storyboard in Resources */,
+				5C08AEE722FCD58A00AED57B /* RegistrationViewController.xib in Resources */,
+				5C06D1C4230AE95200F74682 /* ActivitySelectionViewController.xib in Resources */,
+				5C7BFB4921128E83004DE4F2 /* Assets.xcassets in Resources */,
+				5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */,
+				5C7C39D022DA943800444733 /* SavedWorkoutsViewController.xib in Resources */,
+				5CB54CB522F5C33600A107F6 /* LoginScreenViewController.xib in Resources */,
+				5C7BFB4421128E7C004DE4F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BFB5021128E84004DE4F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BFB5B21128E84004DE4F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E362064ABABB3378025477B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F24AA8C1E7721120A1A3F169 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C7BFB3721128E7C004DE4F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C26822522D4F94800A71C10 /* IntervalRideViewController.swift in Sources */,
+				5C04D49423049B8000D2AAEA /* Stopwatch.swift in Sources */,
+				5CB54CAC22F37B8400A107F6 /* NetworkUtils.swift in Sources */,
+				5CB54CB322F5B40B00A107F6 /* LoginScreenViewController.swift in Sources */,
+				5C7BFB7C21195504004DE4F2 /* savedRideViewController.swift in Sources */,
+				5C0ED34C230C5B2100F20832 /* UserCredentials.swift in Sources */,
+				5C7BFB4721128E7C004DE4F2 /* BikeRideApp.xcdatamodeld in Sources */,
+				5C7BFB722118F73E004DE4F2 /* SingleDistanceRide.swift in Sources */,
+				5CB54CB122F5B34E00A107F6 /* LoginScreenViewModel.swift in Sources */,
+				5CAF726621EA9927009D5D66 /* SingleDistanceRideProtocol.swift in Sources */,
+				5C26BB6122DF8D4D0041061F /* Location.swift in Sources */,
+				5C0ED352230F2EF700F20832 /* UserSettingsPageViewController.swift in Sources */,
+				5C8132E222CE553200C58AEC /* Utilities.swift in Sources */,
+				5C7BFB4121128E7C004DE4F2 /* ViewController.swift in Sources */,
+				5C7C39C922DA6F4D00444733 /* SavedWorkoutsViewModel.swift in Sources */,
+				5C7BFB7621192E5A004DE4F2 /* WorkoutRide.swift in Sources */,
+				5C0ED34F230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld in Sources */,
+				5C08AEE322FC85CE00AED57B /* RegistrationViewModel.swift in Sources */,
+				5C08AEE522FCBC7200AED57B /* RegistrationViewController.swift in Sources */,
+				5C7BFB7A211954A5004DE4F2 /* WorkoutRideViewController.swift in Sources */,
+				5CAF726421EA980E009D5D66 /* WorkoutRideProtocol.swift in Sources */,
+				5C282E3222A4A277007A4E4C /* FreeRideViewController.swift in Sources */,
+				5C0B53B8211B7ED00027BE8B /* mainNavigiationController.swift in Sources */,
+				5C7BFB3F21128E7C004DE4F2 /* AppDelegate.swift in Sources */,
+				5C06D1C0230AE81400F74682 /* ActivitySelectionViewController.swift in Sources */,
+				5C22BC1322C8132C008C1C2D /* IntervalRideViewModel.swift in Sources */,
+				5C7C39D222DA955E00444733 /* SavedWorkoutsViewController.swift in Sources */,
+				5C282E3422A4A698007A4E4C /* FreeRideViewModel.swift in Sources */,
+				5C7BFB7821194090004DE4F2 /* SingleRideViewController.swift in Sources */,
+				5C0DE00C22C43E4B0085DFF1 /* HomeScreenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BFB4E21128E84004DE4F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BFB5721128E84004DE4F2 /* FitnessAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BFB5921128E84004DE4F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BFB6221128E84004DE4F2 /* FitnessAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C7BFB5421128E84004DE4F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7BFB3A21128E7C004DE4F2 /* FitnessApp */;
+			targetProxy = 5C7BFB5321128E84004DE4F2 /* PBXContainerItemProxy */;
+		};
+		5C7BFB5F21128E84004DE4F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7BFB3A21128E7C004DE4F2 /* FitnessApp */;
+			targetProxy = 5C7BFB5E21128E84004DE4F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C7BFB4221128E7C004DE4F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7BFB4321128E7C004DE4F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C7BFB4A21128E83004DE4F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7BFB4B21128E83004DE4F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C7BFB6421128E84004DE4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C7BFB6521128E84004DE4F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C7BFB6721128E84004DE4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C49198E77FA9BDAF78702593 /* Pods-FitnessApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = "$(SRCROOT)/FitnessApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ssd.fitness.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C7BFB6821128E84004DE4F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27F4AE2C2830CE2453D3797D /* Pods-FitnessApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = "$(SRCROOT)/FitnessApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ssd.fitness.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C7BFB6A21128E84004DE4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = BikeRideAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.harvard.csci-s65.BikeRideAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessApp.app/FitnessApp";
+			};
+			name = Debug;
+		};
+		5C7BFB6B21128E84004DE4F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = BikeRideAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.harvard.csci-s65.BikeRideAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessApp.app/FitnessApp";
+			};
+			name = Release;
+		};
+		5C7BFB6D21128E84004DE4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = BikeRideAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.harvard.csci-s65.BikeRideAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BikeRideApp;
+			};
+			name = Debug;
+		};
+		5C7BFB6E21128E84004DE4F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = BikeRideAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.harvard.csci-s65.BikeRideAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BikeRideApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C7BFB3621128E7C004DE4F2 /* Build configuration list for PBXProject "FitnessApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BFB6421128E84004DE4F2 /* Debug */,
+				5C7BFB6521128E84004DE4F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7BFB6621128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BFB6721128E84004DE4F2 /* Debug */,
+				5C7BFB6821128E84004DE4F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7BFB6921128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BFB6A21128E84004DE4F2 /* Debug */,
+				5C7BFB6B21128E84004DE4F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7BFB6C21128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BFB6D21128E84004DE4F2 /* Debug */,
+				5C7BFB6E21128E84004DE4F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C0ED34D230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C0ED34E230DD8F100F20832 /* FitnessAppDataModel.xcdatamodel */,
+			);
+			currentVersion = 5C0ED34E230DD8F100F20832 /* FitnessAppDataModel.xcdatamodel */;
+			path = FitnessAppDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C7BFB4621128E7C004DE4F2 /* BikeRideApp.xcdatamodel */,
+			);
+			currentVersion = 5C7BFB4621128E7C004DE4F2 /* BikeRideApp.xcdatamodel */;
+			path = BikeRideApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5C7BFB3321128E7C004DE4F2 /* Project object */;
+}
