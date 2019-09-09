@@ -30,7 +30,8 @@ class NetworkUtils {
         case getUserActivities
     }
     
-    let baseURL = "http://127.0.0.1:5000"
+    //let baseURL = "http://127.0.0.1:5000"
+    let baseURL = "http://34.219.56.183:5000"
     
     init(){
         print("Created Networking class")

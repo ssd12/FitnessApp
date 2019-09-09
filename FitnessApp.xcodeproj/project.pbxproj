@@ -22,6 +22,7 @@
 		5C0ED354230F2F2000F20832 /* UserSettingsPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0ED353230F2F2000F20832 /* UserSettingsPageViewController.xib */; };
 		5C22BC0D22C80C5E008C1C2D /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */; };
 		5C22BC1322C8132C008C1C2D /* IntervalRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */; };
+		5C23A8942326DD4F004BADBC /* NetworkMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8932326DD4F004BADBC /* NetworkMananger.swift */; };
 		5C26822522D4F94800A71C10 /* IntervalRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */; };
 		5C26822722D4FB2000A71C10 /* IntervalRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */; };
 		5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */; };
@@ -89,6 +90,7 @@
 		5C0ED353230F2F2000F20832 /* UserSettingsPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSettingsPageViewController.xib; sourceTree = "<group>"; };
 		5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewModel.swift; sourceTree = "<group>"; };
+		5C23A8932326DD4F004BADBC /* NetworkMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMananger.swift; sourceTree = "<group>"; };
 		5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewController.swift; sourceTree = "<group>"; };
 		5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntervalRideViewController.xib; sourceTree = "<group>"; };
 		5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeRideViewController.xib; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */,
+				5C23A8932326DD4F004BADBC /* NetworkMananger.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				5C7BFB722118F73E004DE4F2 /* SingleDistanceRide.swift in Sources */,
 				5CB54CB122F5B34E00A107F6 /* LoginScreenViewModel.swift in Sources */,
 				5CAF726621EA9927009D5D66 /* SingleDistanceRideProtocol.swift in Sources */,
+				5C23A8942326DD4F004BADBC /* NetworkMananger.swift in Sources */,
 				5C26BB6122DF8D4D0041061F /* Location.swift in Sources */,
 				5C0ED352230F2EF700F20832 /* UserSettingsPageViewController.swift in Sources */,
 				5C8132E222CE553200C58AEC /* Utilities.swift in Sources */,
