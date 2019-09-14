@@ -49,4 +49,15 @@ final class Utilities {
         case run = "Run"
     }
     
+    enum ResponseType: String {
+        case loginSuccessful = "loginSuccessful"
+        case loginError = "loginError"
+        case logoutSuccessful = "logoutSuccessful"
+        case registrationSuccessful = "registrationSuccessful"
+        case registrationError = "registrationError"
+        case activityAdded = "activityAdded"
+        case userDeleted = "userDeleted"
+        case userActivitiesFetched = "userActivitiesFetched"
+        case error = "error"
+    }
 }

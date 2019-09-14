@@ -1,17 +1,19 @@
 import Foundation
 
-let sharedNetworkManager = NetworkManager()
 
 class NetworkManager {
     
-    let baseURL = ""
+    
+    static let shared = NetworkManager()
+
     
     init(){
         
     }
     
-    func sendRequest() {
-        
+    func sendRequest(_ parameters: [String: String], _ requestType: RequestType) {
+        let request = Request(parameters: parameters, requestType: requestType)
+        request.sendRequest()
     }
     
     

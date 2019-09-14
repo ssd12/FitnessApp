@@ -1,0 +1,7 @@
+module RxSwift {
+  umbrella header "RxSwift-iOS12.4-umbrella.h"
+  exclude header "RxSwift-iOS11.4-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -31,7 +31,7 @@ class NetworkUtils {
     }
     
     //let baseURL = "http://127.0.0.1:5000"
-    let baseURL = "http://34.219.56.183:5000"
+    let baseURL = "http://34.221.147.63:5000"
     
     init(){
         print("Created Networking class")
@@ -45,6 +45,7 @@ class NetworkUtils {
                 response in
                 let responseBody = String(data:response.data!, encoding: .utf8)
                 print("response body: \(String(describing: responseBody)) type: \(type(of: responseBody))")
+                print("response result: \(response.result)")
                 self.setUserLoginState(Utilities.userLoginState(rawValue: responseBody ?? "")!, parameters["username"]!)
             }
         case .userLogout:

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class LoginScreenViewController: UIViewController{
     
@@ -17,12 +18,10 @@ final class LoginScreenViewController: UIViewController{
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginStatusLabel: UILabel!
     
-    
     override func viewDidLoad() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateUserLoginStatus), name: .registrationStatusUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(segueToActivitySelection), name: .logUserIn, object: nil)
         setupViews()
     }
-    
     
     @IBAction func userSignInButton(_ sender: Any) {
         let username = loginTextField.text ?? ""
@@ -33,28 +32,22 @@ final class LoginScreenViewController: UIViewController{
     private func setupViews() {
         passwordTextField.isSecureTextEntry = true
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        self.loginViewModel.rx.base.userLoginInfo.bind(to: loginStatusLabel.rx.text).disposed(by: loginViewModel.disposeBag)
         view.addGestureRecognizer(tap)
         clearUserEntryFields()
-        setupNavBar()
-    }
-    
-    private func setupNavBar() {
         self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func userRegistrationButton(_ sender: Any) {
-        print("Transitioning to registration page")
+        print("Transition to registration page")
         let registrationVC = RegistrationViewController()
         self.navigationController?.pushViewController(registrationVC, animated: true)
     }
     
-    @objc func updateUserLoginStatus() {
-        loginStatusLabel.text = loginViewModel.userLoginInfo
-        if (loginViewModel.isUserLoggedIn){
+    @objc func segueToActivitySelection() {
             let activitySelectionVC = ActivitySelectionViewController()
             self.navigationController?.pushViewController(activitySelectionVC, animated: true)
             clearUserEntryFields()
-        }
     }
     
     private func clearUserEntryFields() {

@@ -9,14 +9,16 @@
 import Foundation
 import RxSwift
 
-final class RegistrationViewModel {
+final class RegistrationViewModel: ReactiveCompatible {
+    
+    
+    let userRegistrationStatusDescription: BehaviorSubject<String> = BehaviorSubject(value: "")
     
     var userRegistrationStatus: String = "Registration Status"
     var networkUtilities: NetworkUtils = NetworkUtils()
     var disposeBag = DisposeBag()
     
     init() {
-        NotificationCenter.default.post(name: .registrationStatusUpdate, object: nil)
         setSubscription()
     }
     
@@ -24,33 +26,25 @@ final class RegistrationViewModel {
         print("Sending request to register user")
         let parameters = ["username": username, "password":password, "email":email, "securityQuestion":securityQuestion, "securityQuestionAnswer":securityQuestionAnswer]
         print("paramters: \(parameters)")
-        networkUtilities.sendRequest(parameters, .createNewUser)
-    }
-    
-    func emailValidCheck(_ email: String) -> Bool {
-        return true
+        NetworkManager.shared.sendRequest(parameters, .createNewUser)
+        User.profile.setUserDefaults(username)
     }
     
     private func setSubscription() {
-        let registrationStatusSubscription = networkUtilities.userRegistrationStatus.asObserver().subscribe(onNext: handleRegistrationStatus(_:), onError: handleError(_:), onCompleted: { }, onDisposed: handleOnDispose)
-    }
-    
-    private func handleRegistrationStatus(_ status: String) {
-        print("Handling user registration status: \(status)")
-        userRegistrationStatus = status
-        NotificationCenter.default.post(name: .registrationStatusUpdate, object: nil)
-    }
-    
-    private func handleError(_ error: Error) {
-        userRegistrationStatus = "Error during registration"
-        NotificationCenter.default.post(name: .registrationStatusUpdate, object: nil)
-    }
-    
-    private func handleOnDispose() {
-        networkUtilities.userRegistrationStatus.dispose()
+        let registrationSuccessfulSubscription = ObserverService.shared.registrationSuccessful.subscribe(
+            onNext: { (status: Bool) -> Void in if (status) { NotificationCenter.default.post(name: .registrationSuccess, object: nil) } else { User.profile.clearUserDefaults()} },
+            onError: { (error: Error) -> Void in print(error)},
+            onCompleted: {},
+            onDisposed: {ObserverService.shared.disposeBag.insert(ObserverService.shared.registrationSuccessful)})
+        
+        let registrationStatusDescriptionSubscription = ObserverService.shared.registrationStatusDescription.subscribe(
+            onNext: { (description: String) -> Void in self.userRegistrationStatusDescription.onNext(description)},
+            onError: { (error: Error) -> Void in print(error)},
+            onCompleted: {},
+            onDisposed: {ObserverService.shared.disposeBag.insert(ObserverService.shared.registrationStatusDescription)})
     }
 }
 
 extension Notification.Name {
-    static let registrationStatusUpdate = Notification.Name("registrationStatusUpdate")
+    static let registrationSuccess = Notification.Name("registrationSucess")
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0507A4F86CA1880040BACAB9 /* Pods_FitnessApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD18C673F66082B7DB84192 /* Pods_FitnessApp.framework */; };
+		0D4A579BC7D2C12F3A5A543C /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8740099A8AC7F7B8432F1519 /* libPods-Tests.a */; };
 		5C04D49423049B8000D2AAEA /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04D49323049B8000D2AAEA /* Stopwatch.swift */; };
 		5C06D1C0230AE81400F74682 /* ActivitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06D1BF230AE81400F74682 /* ActivitySelectionViewController.swift */; };
 		5C06D1C4230AE95200F74682 /* ActivitySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C06D1C3230AE95200F74682 /* ActivitySelectionViewController.xib */; };
@@ -23,6 +23,12 @@
 		5C22BC0D22C80C5E008C1C2D /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */; };
 		5C22BC1322C8132C008C1C2D /* IntervalRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */; };
 		5C23A8942326DD4F004BADBC /* NetworkMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8932326DD4F004BADBC /* NetworkMananger.swift */; };
+		5C23A8962326F6EE004BADBC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8952326F6EE004BADBC /* Request.swift */; };
+		5C23A8A223284241004BADBC /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8A123284241004BADBC /* Tests.swift */; };
+		5C23A8AA2329DB0D004BADBC /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8A92329DB0D004BADBC /* AlertToast.swift */; };
+		5C23A8AC2329F842004BADBC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AB2329F842004BADBC /* Parser.swift */; };
+		5C23A8AE232D2C09004BADBC /* ObserverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AD232D2C09004BADBC /* ObserverService.swift */; };
+		5C23A8B0232D3910004BADBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AF232D390F004BADBC /* User.swift */; };
 		5C26822522D4F94800A71C10 /* IntervalRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */; };
 		5C26822722D4FB2000A71C10 /* IntervalRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */; };
 		5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */; };
@@ -35,7 +41,6 @@
 		5C7BFB4721128E7C004DE4F2 /* BikeRideApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */; };
 		5C7BFB4921128E83004DE4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4821128E83004DE4F2 /* Assets.xcassets */; };
 		5C7BFB4C21128E83004DE4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4A21128E83004DE4F2 /* LaunchScreen.storyboard */; };
-		5C7BFB5721128E84004DE4F2 /* FitnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB5621128E84004DE4F2 /* FitnessAppTests.swift */; };
 		5C7BFB6221128E84004DE4F2 /* FitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */; };
 		5C7BFB722118F73E004DE4F2 /* SingleDistanceRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB712118F73E004DE4F2 /* SingleDistanceRide.swift */; };
 		5C7BFB7621192E5A004DE4F2 /* WorkoutRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB7521192E5A004DE4F2 /* WorkoutRide.swift */; };
@@ -54,9 +59,17 @@
 		5CB54CB122F5B34E00A107F6 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */; };
 		5CB54CB322F5B40B00A107F6 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */; };
 		5CB54CB522F5C33600A107F6 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */; };
+		E741AEBCF3E39DAF8733939B /* libPods-FitnessApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF769526F8C270001A4E4CD6 /* libPods-FitnessApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5C23A8A423284241004BADBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7BFB3321128E7C004DE4F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7BFB3A21128E7C004DE4F2;
+			remoteInfo = FitnessApp;
+		};
 		5C7BFB5321128E84004DE4F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5C7BFB3321128E7C004DE4F2 /* Project object */;
@@ -75,7 +88,6 @@
 
 /* Begin PBXFileReference section */
 		27F4AE2C2830CE2453D3797D /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
-		2DD18C673F66082B7DB84192 /* Pods_FitnessApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C04D49323049B8000D2AAEA /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		5C06D1BF230AE81400F74682 /* ActivitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectionViewController.swift; sourceTree = "<group>"; };
 		5C06D1C3230AE95200F74682 /* ActivitySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySelectionViewController.xib; sourceTree = "<group>"; };
@@ -91,6 +103,14 @@
 		5C22BC0C22C80C5E008C1C2D /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		5C22BC1222C8132C008C1C2D /* IntervalRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewModel.swift; sourceTree = "<group>"; };
 		5C23A8932326DD4F004BADBC /* NetworkMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMananger.swift; sourceTree = "<group>"; };
+		5C23A8952326F6EE004BADBC /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5C23A89F23284241004BADBC /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C23A8A123284241004BADBC /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		5C23A8A323284241004BADBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C23A8A92329DB0D004BADBC /* AlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
+		5C23A8AB2329F842004BADBC /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		5C23A8AD232D2C09004BADBC /* ObserverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverService.swift; sourceTree = "<group>"; };
+		5C23A8AF232D390F004BADBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewController.swift; sourceTree = "<group>"; };
 		5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntervalRideViewController.xib; sourceTree = "<group>"; };
 		5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeRideViewController.xib; sourceTree = "<group>"; };
@@ -106,8 +126,6 @@
 		5C7BFB4B21128E83004DE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7BFB4D21128E83004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C7BFB5221128E84004DE4F2 /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C7BFB5621128E84004DE4F2 /* FitnessAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppTests.swift; sourceTree = "<group>"; };
-		5C7BFB5821128E84004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C7BFB5D21128E84004DE4F2 /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITests.swift; sourceTree = "<group>"; };
 		5C7BFB6321128E84004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,17 +146,29 @@
 		5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		8740099A8AC7F7B8432F1519 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F91B35847B7642B30E80C56 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4EB757AE20D656D4CF9934E /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BF769526F8C270001A4E4CD6 /* libPods-FitnessApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitnessApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49198E77FA9BDAF78702593 /* Pods-FitnessApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.debug.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5C23A89C23284241004BADBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D4A579BC7D2C12F3A5A543C /* libPods-Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C7BFB3821128E7C004DE4F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5CA5F8AC21BC27A00034687A /* MapKit.framework in Frameworks */,
 				5C7C5B25211E62CC00FA2326 /* CoreData.framework in Frameworks */,
-				0507A4F86CA1880040BACAB9 /* Pods_FitnessApp.framework in Frameworks */,
+				E741AEBCF3E39DAF8733939B /* libPods-FitnessApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				5C0ED34B230C5B2100F20832 /* UserCredentials.swift */,
+				5C23A8AF232D390F004BADBC /* User.swift */,
 			);
 			path = UserCredentials;
 			sourceTree = "<group>";
@@ -210,6 +241,15 @@
 				5C26BB6022DF8D4D0041061F /* Location.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		5C23A8A023284241004BADBC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5C23A8A123284241004BADBC /* Tests.swift */,
+				5C23A8A323284241004BADBC /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		5C282E2F22A4849E007A4E4C /* FreeRide */ = {
@@ -237,8 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				5C7BFB3D21128E7C004DE4F2 /* FitnessApp */,
-				5C7BFB5521128E84004DE4F2 /* FitnessAppTests */,
 				5C7BFB6021128E84004DE4F2 /* FitnessAppUITests */,
+				5C23A8A023284241004BADBC /* Tests */,
 				5C7BFB3C21128E7C004DE4F2 /* Products */,
 				5C7C5B23211E62CC00FA2326 /* Frameworks */,
 				6C5F0C638021083A62BDB5E2 /* Pods */,
@@ -251,6 +291,7 @@
 				5C7BFB3B21128E7C004DE4F2 /* FitnessApp.app */,
 				5C7BFB5221128E84004DE4F2 /* FitnessAppTests.xctest */,
 				5C7BFB5D21128E84004DE4F2 /* FitnessAppUITests.xctest */,
+				5C23A89F23284241004BADBC /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,15 +323,6 @@
 			path = FitnessApp;
 			sourceTree = "<group>";
 		};
-		5C7BFB5521128E84004DE4F2 /* FitnessAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				5C7BFB5621128E84004DE4F2 /* FitnessAppTests.swift */,
-				5C7BFB5821128E84004DE4F2 /* Info.plist */,
-			);
-			path = FitnessAppTests;
-			sourceTree = "<group>";
-		};
 		5C7BFB6021128E84004DE4F2 /* FitnessAppUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,7 +347,8 @@
 			children = (
 				5CA5F8AB21BC27A00034687A /* MapKit.framework */,
 				5C7C5B24211E62CC00FA2326 /* CoreData.framework */,
-				2DD18C673F66082B7DB84192 /* Pods_FitnessApp.framework */,
+				BF769526F8C270001A4E4CD6 /* libPods-FitnessApp.a */,
+				8740099A8AC7F7B8432F1519 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				5C8132E122CE553200C58AEC /* Utilities.swift */,
+				5C23A8A92329DB0D004BADBC /* AlertToast.swift */,
+				5C23A8AD232D2C09004BADBC /* ObserverService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -381,6 +416,8 @@
 			children = (
 				5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */,
 				5C23A8932326DD4F004BADBC /* NetworkMananger.swift */,
+				5C23A8952326F6EE004BADBC /* Request.swift */,
+				5C23A8AB2329F842004BADBC /* Parser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -400,6 +437,8 @@
 			children = (
 				C49198E77FA9BDAF78702593 /* Pods-FitnessApp.debug.xcconfig */,
 				27F4AE2C2830CE2453D3797D /* Pods-FitnessApp.release.xcconfig */,
+				9F91B35847B7642B30E80C56 /* Pods-Tests.debug.xcconfig */,
+				B4EB757AE20D656D4CF9934E /* Pods-Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -407,6 +446,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5C23A89E23284241004BADBC /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C23A8A623284241004BADBC /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				9A018C168347B3A5314C03F3 /* [CP] Check Pods Manifest.lock */,
+				5C23A89B23284241004BADBC /* Sources */,
+				5C23A89C23284241004BADBC /* Frameworks */,
+				5C23A89D23284241004BADBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C23A8A523284241004BADBC /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 5C23A89F23284241004BADBC /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5C7BFB3A21128E7C004DE4F2 /* FitnessApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C7BFB6621128E84004DE4F2 /* Build configuration list for PBXNativeTarget "FitnessApp" */;
@@ -415,7 +473,6 @@
 				5C7BFB3721128E7C004DE4F2 /* Sources */,
 				5C7BFB3821128E7C004DE4F2 /* Frameworks */,
 				5C7BFB3921128E7C004DE4F2 /* Resources */,
-				F24AA8C1E7721120A1A3F169 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -468,10 +525,14 @@
 		5C7BFB3321128E7C004DE4F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Simran Dhillon";
 				TargetAttributes = {
+					5C23A89E23284241004BADBC = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 5C7BFB3A21128E7C004DE4F2;
+					};
 					5C7BFB3A21128E7C004DE4F2 = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
@@ -509,11 +570,19 @@
 				5C7BFB3A21128E7C004DE4F2 /* FitnessApp */,
 				5C7BFB5121128E84004DE4F2 /* FitnessAppTests */,
 				5C7BFB5C21128E84004DE4F2 /* FitnessAppUITests */,
+				5C23A89E23284241004BADBC /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C23A89D23284241004BADBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C7BFB3921128E7C004DE4F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,26 +640,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F24AA8C1E7721120A1A3F169 /* [CP] Embed Pods Frameworks */ = {
+		9A018C168347B3A5314C03F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C23A89B23284241004BADBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C23A8A223284241004BADBC /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C7BFB3721128E7C004DE4F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,8 +692,11 @@
 				5C0ED352230F2EF700F20832 /* UserSettingsPageViewController.swift in Sources */,
 				5C8132E222CE553200C58AEC /* Utilities.swift in Sources */,
 				5C7BFB4121128E7C004DE4F2 /* ViewController.swift in Sources */,
+				5C23A8AE232D2C09004BADBC /* ObserverService.swift in Sources */,
+				5C23A8AA2329DB0D004BADBC /* AlertToast.swift in Sources */,
 				5C7C39C922DA6F4D00444733 /* SavedWorkoutsViewModel.swift in Sources */,
 				5C7BFB7621192E5A004DE4F2 /* WorkoutRide.swift in Sources */,
+				5C23A8962326F6EE004BADBC /* Request.swift in Sources */,
 				5C0ED34F230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld in Sources */,
 				5C08AEE322FC85CE00AED57B /* RegistrationViewModel.swift in Sources */,
 				5C08AEE522FCBC7200AED57B /* RegistrationViewController.swift in Sources */,
@@ -624,7 +709,9 @@
 				5C22BC1322C8132C008C1C2D /* IntervalRideViewModel.swift in Sources */,
 				5C7C39D222DA955E00444733 /* SavedWorkoutsViewController.swift in Sources */,
 				5C282E3422A4A698007A4E4C /* FreeRideViewModel.swift in Sources */,
+				5C23A8B0232D3910004BADBC /* User.swift in Sources */,
 				5C7BFB7821194090004DE4F2 /* SingleRideViewController.swift in Sources */,
+				5C23A8AC2329F842004BADBC /* Parser.swift in Sources */,
 				5C0DE00C22C43E4B0085DFF1 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +720,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7BFB5721128E84004DE4F2 /* FitnessAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +734,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5C23A8A523284241004BADBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7BFB3A21128E7C004DE4F2 /* FitnessApp */;
+			targetProxy = 5C23A8A423284241004BADBC /* PBXContainerItemProxy */;
+		};
 		5C7BFB5421128E84004DE4F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5C7BFB3A21128E7C004DE4F2 /* FitnessApp */;
@@ -680,6 +771,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5C23A8A723284241004BADBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F91B35847B7642B30E80C56 /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = SimranDhillon.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessApp.app/FitnessApp";
+			};
+			name = Debug;
+		};
+		5C23A8A823284241004BADBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4EB757AE20D656D4CF9934E /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376BJX87UD;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = SimranDhillon.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessApp.app/FitnessApp";
+			};
+			name = Release;
+		};
 		5C7BFB6421128E84004DE4F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -917,6 +1055,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C23A8A623284241004BADBC /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C23A8A723284241004BADBC /* Debug */,
+				5C23A8A823284241004BADBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5C7BFB3621128E7C004DE4F2 /* Build configuration list for PBXProject "FitnessApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

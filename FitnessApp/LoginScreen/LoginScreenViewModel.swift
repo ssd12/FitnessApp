@@ -1,60 +1,42 @@
-//
-//  LoginScreenViewModel.swift
-//  BikeRideApp
-//
-//  Copyright © 2019 Simran Dhillon. All rights reserved.
-//
-
 import Foundation
 import RxSwift
 import RxCocoa
 
-
-class LoginScreenViewModel {
+class LoginScreenViewModel: ReactiveCompatible {
     
-    let networkUtilities = NetworkUtils()
-    var userLoginInfo = ""
-    var isUserLoggedIn: Bool = false
+    let userLoginInfo: BehaviorSubject<String> = BehaviorSubject(value: "User not Logged in.")
+    let disposeBag = DisposeBag()
     
     init() {
-        setSubscription()
+        let loginStatusSubscription = ObserverService.shared.isUserLoggedIn.subscribe(onNext: handleUserLogIn(_:), onError: handleUserLoginError(_:), onCompleted: {}, onDisposed: { ObserverService.shared.disposeBag.self.insert(ObserverService.shared.isUserLoggedIn)
+        })
+        
+        let loginStatusDescriptionSubscription = ObserverService.shared.userLoginStatusDescription.subscribe(onNext: { (description: String) -> Void in self.userLoginInfo.onNext(description)}, onError: handleUserLoginError(_:), onCompleted: {}, onDisposed: {ObserverService.shared.disposeBag.self.insert(ObserverService.shared.userLoginStatusDescription)})
     }
     
     private func handleUserLogIn(_ loginStatus: Bool) {
         print("LoginScreenViewModel: Handle user login. Logged in: \(loginStatus)")
         if (loginStatus) {
-            userLoginInfo = " User Logging in."
-            isUserLoggedIn = true
+            userLoginInfo.onNext("User logged in successfully")
+            NotificationCenter.default.post(name: .logUserIn, object: nil)
         } else {
-            userLoginInfo = " Incorrect password and/or username."
+            User.profile.clearUserDefaults()
         }
-        NotificationCenter.default.post(name: .registrationStatusUpdate, object: nil)
     }
     
     private func handleUserLoginError(_ error: Error) {
         print("LoginScreenViewModel: Handle user login error")
-        userLoginInfo = " Error logging user in."
-        NotificationCenter.default.post(name: .registrationStatusUpdate, object: nil)
-    }
-    
-    private func handleUserLoginCompletion() {
-        print("LoginScreenViewModel: Handle user login completion")
-    }
-    
-    private func handleUserLoginDisposale() {
-        networkUtilities.userLoggedIn.dispose()
+        userLoginInfo.onNext("Error with user login")
     }
     
     func login(_ username: String, _ password: String) {
         let parameters = ["username":username, "password":password]
-        networkUtilities.sendRequest(parameters, .userLogin)
-    }
-    
-    func setSubscription() {
-        let loginStatusSubscription = networkUtilities.userLoggedIn.subscribe(onNext: handleUserLogIn(_:), onError: handleUserLoginError(_:), onCompleted: handleUserLoginCompletion, onDisposed: handleUserLoginDisposale)
+        User.profile.setUserDefaults(username)
+        print("Logging in with parameters: \(parameters)")
+        NetworkManager.shared.sendRequest(parameters, .userLogin)
     }
 }
 
 extension Notification.Name {
-    static let loginStatus = Notification.Name("loginStatusUpdate")
+    static let logUserIn = Notification.Name("logUserIn")
 }

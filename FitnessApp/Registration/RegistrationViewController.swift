@@ -1,17 +1,8 @@
-//
-//  RegistrationViewController.swift
-//  BikeRideApp
-//
-//  Created by Simran Dhillon on 8/8/19.
-//  Copyright © 2019 Simran Dhillon. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
 final class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
- 
     @IBOutlet private weak var usernameTextBox: UITextField!
     @IBOutlet private weak var passwordTextBox: UITextField!
     @IBOutlet private weak var emailTextBox: UITextField!
@@ -27,7 +18,7 @@ final class RegistrationViewController: UIViewController, UIPickerViewDelegate, 
     private var pickerQuestion = "Name of pet"
     
     override func viewDidLoad() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateRegistrationStatus), name: .registrationStatusUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(userSuccessfullyRegistered), name: .registrationSuccess, object: nil)
         setupViews()
     }
     
@@ -38,6 +29,7 @@ final class RegistrationViewController: UIViewController, UIPickerViewDelegate, 
         print("Setup views for registration page")
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
+        registrationViewModel.rx.base.userRegistrationStatusDescription.bind(to: registrationStatusLabel.rx.text).disposed(by: registrationViewModel.disposeBag)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -57,32 +49,24 @@ final class RegistrationViewController: UIViewController, UIPickerViewDelegate, 
             displayInvalidUserInputAlertBox("Username")
             return
         }
-        
         guard let newUserPassword = passwordTextBox.text, userInputValid(newUserPassword) else {
             displayInvalidUserInputAlertBox("Password")
             return
         }
-        
         guard let newUserSecurityQuestionAnswer = securityAnswerTextBox.text, userInputValid(newUserSecurityQuestionAnswer) else {
             displayInvalidUserInputAlertBox("User Security Question Answer")
             return
         }
-        
         guard let userEmail = emailTextBox.text, userInputValid(userEmail) else {
             let invalidEmailAlert = UIAlertController(title: "Registration Error", message: "Invalid Email", preferredStyle: .alert)
             invalidEmailAlert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
             return
         }
-        
         registrationViewModel.registerUser(newUserName, newUserPassword, userEmail, pickerQuestion, newUserSecurityQuestionAnswer)
     }
     
     private func userInputValid(_ input: String?) -> Bool {
         return (input?.count ?? 0 > 3)
-    }
-    
-    private func userEmailValid(_ email: String) -> Bool {
-        return registrationViewModel.emailValidCheck(email)
     }
     
     private func displayInvalidUserInputAlertBox(_ invalidUserField: String) {
@@ -91,10 +75,8 @@ final class RegistrationViewController: UIViewController, UIPickerViewDelegate, 
         self.present(invalidUserInputAlert, animated: true)
     }
     
-    @objc func updateRegistrationStatus() {
-        print("Getting registration status")
-        registrationStatusLabel.text = registrationViewModel.userRegistrationStatus
-        //check registration status
-        self.navigationController?.popToViewController(LoginScreenViewController(), animated: true)
+    @objc func userSuccessfullyRegistered() {
+        let activitySelectionVC = ActivitySelectionViewController()
+        self.navigationController?.popToViewController(activitySelectionVC, animated: true)
     }
 }

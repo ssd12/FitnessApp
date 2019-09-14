@@ -15,6 +15,7 @@ class ActivitySelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         setupNavBar()
+        let userLogoutStatusSubscription = ObserverService.shared.isUserLoggedOut.subscribe(onNext: handleUserLogOut(_:), onError: { (error: Error) -> Void in print(error) }, onCompleted: {}, onDisposed: {ObserverService.shared.disposeBag.insert(ObserverService.shared.isUserLoggedOut)})
     }
     
     private func setupNavBar() {
@@ -22,8 +23,10 @@ class ActivitySelectionViewController: UIViewController {
         self.navigationController?.visibleViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self,  action: #selector(logoutUser))
         
         self.navigationController?.visibleViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(accessUserSettings))
-        
-        let loginStatusSubscription = networkUtilities.logUserOut.subscribe(onNext: handleUserLogOut(_:), onError: handleUserLoginError(_:), onCompleted: handleUserLoginCompletion, onDisposed: handleUserLoginDisposale)
+        self.navigationController?.navigationBar.isHidden = false
+        /*
+        _ = networkUtilities.logUserOut.subscribe(onNext: handleUserLogOut(_:), onError: handleUserLoginError(_:), onCompleted: handleUserLoginCompletion, onDisposed: handleUserLoginDisposale)
+         */
     }
     
     @IBAction func walkButtonpressed(_ sender: Any) {
@@ -49,35 +52,22 @@ class ActivitySelectionViewController: UIViewController {
         self.navigationController?.pushViewController(savedActivitiesVC, animated: true)
     }
     
-    
     private func handleUserLogOut(_ logoutStatus: Bool) {
         print("Logout user: \(logoutStatus)")
             if (logoutStatus) {
                 self.navigationController?.popViewController(animated: true)
+                User.profile.clearUserDefaults()
         }
-    }
-    
-    private func handleUserLoginError(_ error: Error) {
-        print("Logout Error")
-    }
-    
-    private func handleUserLoginCompletion() {
-        print("Handle user login/logout completion")
-    }
-    
-    private func handleUserLoginDisposale() {
-        networkUtilities.userLoggedIn.dispose()
     }
     
     @objc func logoutUser() {
         print("Logging user out")
         let parameters = ["username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        networkUtilities.sendRequest(parameters, .userLogout)
+        NetworkManager.shared.sendRequest(parameters, .userLogout)
     }
     
     @objc func accessUserSettings() {
         let userSettingsVC = UserSettingsPageViewController()
         self.navigationController?.pushViewController(userSettingsVC, animated: true)
     }
-    
 }

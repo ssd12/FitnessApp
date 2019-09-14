@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var navigationController: UINavigationController?
-
+    let networkManager = NetworkManager()
+    let observerService = ObserverService()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -25,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
-        
+        print("Network manager info: \(NetworkManager.shared)")
         return true
     }
 
