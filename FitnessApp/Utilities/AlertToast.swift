@@ -4,7 +4,8 @@ import UIKit
 class AlertToast {
 
     /*
-     used solution from stackoverflow: https://stackoverflow.com/questions/31540375/how-to-toast-message-in-swift
+     used solution from stackoverflow:
+     stackoverflow.com/questions/31540375/how-to-toast-message-in-swift
      for toast creation below
     */
  

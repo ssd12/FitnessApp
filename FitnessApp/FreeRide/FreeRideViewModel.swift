@@ -12,7 +12,7 @@ import RxCocoa
 import CoreLocation
 import Alamofire
 
-class FreeRideViewModel {
+class FreeRideViewModel: ReactiveCompatible {
     
     private(set) var totalDistance: Double = 0.0
     private(set) var totalTime: Double = 0.0
@@ -23,8 +23,11 @@ class FreeRideViewModel {
     private(set) var currentLocation: CLLocation
     private(set) var activityInSession: Bool = false
     
+    private(set) var activityAddedObservable: BehaviorSubject<Bool> = BehaviorSubject(value: false)
+    
     init() {
         currentLocation = self.location.defaultLocationValue
+        
     }
     
     func startRide() {
@@ -34,6 +37,14 @@ class FreeRideViewModel {
         let stopwatchUpdateSubscription = stopWatch.elapsedTimeSubject.subscribe(onNext: timeElapsedObserved(_:), onError: handleObserverError(_:), onCompleted: handleObserverCompletion, onDisposed: handleObserverDisposal)
         let locationUpdateSubscription = location.locationCoordinates.subscribe(onNext: locationUpdateObserved(_:), onError: handleObserverError(_:), onCompleted: handleObserverCompletion, onDisposed: handleObserverDisposal)
         activityInSession = true
+    }
+    
+    private func setSubscriptions() {
+        let activityAddedSubscription = ObserverService.shared.userActiviyAddedSuccessful.subscribe(
+            onNext: { (activityAdded: Bool) -> Void in if (activityAdded) { self.activityAddedObservable.onNext(true)} },
+            onError: { (error: Error) -> Void in print(error) },
+            onCompleted: {},
+            onDisposed: { ObserverService.shared.disposeBag.insert(ObserverService.shared.userActiviyAddedSuccessful) })
     }
     
     private func totalDistanceObserved(_ distance: Double) {
@@ -105,8 +116,9 @@ class FreeRideViewModel {
         print("timestamp description: \(timestamp.description)")
         let activityID = timestamp.description
         let parameters = ["activityID":activityID,"activityType":activityType,"distance":String(totalDistance),"time": String(totalTime),"username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        let networkUtils = NetworkUtils()
-        networkUtils.sendRequest(parameters, .addNewActivity)
+        //let networkUtils = NetworkUtils()
+        //networkUtils.sendRequest(parameters, .addNewActivity)
+        NetworkManager.shared.sendRequest(parameters, .addNewActivity)
         NotificationCenter.default.post(name: .rideSaved, object: nil)
     }
 }

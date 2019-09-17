@@ -11,6 +11,8 @@ class ObserverService {
     let isUserLoggedOut: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     let registrationSuccessful: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     let registrationStatusDescription: BehaviorSubject<String> = BehaviorSubject(value: "")
+    let userAccountDeletedSuccesful: BehaviorSubject<Bool> = BehaviorSubject(value: false)
+    let userActiviyAddedSuccessful: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     
     init() {
         
@@ -40,10 +42,14 @@ class ObserverService {
             registrationStatusDescription.onNext(info)
         case .activityAdded:
             print("Activity Added")
+            userActiviyAddedSuccessful.onNext(true)
         case .userDeleted:
             print("User account deleted")
+            userAccountDeletedSuccesful.onNext(false)
+            userLoginStatusDescription.onNext(info)
         case .userActivitiesFetched:
             print("Fetched all user activites")
+            print(info)
         case .error:
             print("Error")
         }

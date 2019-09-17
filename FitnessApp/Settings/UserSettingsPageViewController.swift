@@ -1,31 +1,21 @@
-//
-//  UserSettingsPageViewController.swift
-//  FitnessApp
-//
-//  Created by Simran Dhillon on 8/22/19.
-//  Copyright © 2019 Simran Dhillon. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
 class UserSettingsPageViewController: UIViewController {
     
-    let networkUtils = NetworkUtils()
-    
     @IBOutlet weak var deleteUserAccountButton: UIButton!
     
     override func viewDidLoad() {
-        setupNavBar()
-        //let deletionStatusSubscription = networkUtils.userAccountDeletionStatus.subscribe(onNext: handleDeletionStatus(_:), onError: handleDeletionError(_:), onCompleted: {}, onDisposed: {})
-    }
-    
-    private func setupNavBar() {
         self.navigationController?.visibleViewController?.navigationItem.title = "User Settings"
+        let deletionStatusSubscription = ObserverService.shared.userAccountDeletedSuccesful.subscribe(
+            onNext: { (status: Bool) -> Void in if (status) { self.handleDeletionStatus()} },
+            onError: { (error: Error) -> Void in print(error)},
+            onCompleted: {},
+            onDisposed: {ObserverService.shared.disposeBag.insert(ObserverService.shared.userAccountDeletedSuccesful)})
     }
     
     @IBAction func deleteUserAccountButtonPressed(_ sender: Any) {
-            showUserAccountDeletionAlert()
+        showUserAccountDeletionAlert()
     }
     
     func showUserAccountDeletionAlert() {
@@ -38,26 +28,12 @@ class UserSettingsPageViewController: UIViewController {
     private func sendDeletionRequest() {
         print("Sending request to delete user account")
         let parameters = ["username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        networkUtils.sendRequest(parameters, .deleteUser)
-        networkUtils.setUserDefaults("", false)
+        NetworkManager.shared.sendRequest(parameters, .deleteUser)
+    }
+    
+    private func handleDeletionStatus() {
+        User.profile.clearUserDefaults()
         let loginVC = LoginScreenViewController()
         self.navigationController?.popToViewController(loginVC, animated: true)
     }
-    
-    private func handleDeletionStatus(_ status: String) {
-        print("Deletion Account status: \(status)")
-        if (status == "deleted"){
-            //"log" user out and transition to login page
-            //networkUtils.setUserDefaults("", false)
-            //self.navigationController?.popViewController(animated: true)
-            
-        } else {
-            //display a alert box stating there is an error
-        }
-    }
-    
-    private func handleDeletionError(_ error: Error) {
-        print("Error during account deletion")
-    }
-    
 }

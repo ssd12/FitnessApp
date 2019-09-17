@@ -1,11 +1,5 @@
 //
 //  SavedRidesViewModel.swift
-//  BikeRideApp
-//
-//  Created by Simran Dhillon on 7/13/19.
-//  Copyright © 2019 Simran Dhillon. All rights reserved.
-//
-
 import Foundation
 import CoreData
 import UIKit
@@ -13,17 +7,18 @@ import UIKit
 class SavedWorkoutsViewModel {
     
     private(set) var savedActivities: [NSManagedObject] = []
-    let networkUtils = NetworkUtils()
+    //let networkUtils = NetworkUtils()
     
     init() {
         print("SavedWorkoutsViewModel created")
-        let userActivityLoadedSubscription = networkUtils.userActivitiesLoaded.subscribe(onNext: handleUserActivitiesLoaded(_:), onError: handleActivityLoadingError(_:), onCompleted: handleOnCompleted, onDisposed: handleOnCompleted)
+        //let userActivityLoadedSubscription = networkUtils.userActivitiesLoaded.subscribe(onNext: handleUserActivitiesLoaded(_:), onError: handleActivityLoadingError(_:), onCompleted: handleOnCompleted, onDisposed: handleOnCompleted)
     }
     
     func getAllUserActivities() {
         let parameters = ["username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
         print("Getting user activities with username: \(UserDefaults.standard.object(forKey: "username") as? String ?? "")")
-        networkUtils.sendRequest(parameters,  .getUserActivities)
+        //networkUtils.sendRequest(parameters,  .getUserActivities)
+        NetworkManager.shared.sendRequest(parameters, .getUserActivities)
         print("Request sent to get all user activities")
     }
 
@@ -79,7 +74,7 @@ class SavedWorkoutsViewModel {
         
         
         let parameters = ["activityID":id, "username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        networkUtils.sendRequest(parameters, .removeUserActivity)
+        //networkUtils.sendRequest(parameters, .removeUserActivity)
         print("Deleted activity with id: \(id)")
     }
     

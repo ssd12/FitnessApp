@@ -1,21 +1,10 @@
-//
-//  RegistrationViewModel.swift
-//  BikeRideApp
-//
-//  Created by Simran Dhillon on 8/8/19.
-//  Copyright © 2019 Simran Dhillon. All rights reserved.
-//
-
 import Foundation
 import RxSwift
 
 final class RegistrationViewModel: ReactiveCompatible {
     
-    
     let userRegistrationStatusDescription: BehaviorSubject<String> = BehaviorSubject(value: "")
-    
     var userRegistrationStatus: String = "Registration Status"
-    var networkUtilities: NetworkUtils = NetworkUtils()
     var disposeBag = DisposeBag()
     
     init() {

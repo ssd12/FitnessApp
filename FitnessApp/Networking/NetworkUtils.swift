@@ -1,13 +1,5 @@
-//
-//  Networking.swift
-//  BikeRideApp
-//
-//  Copyright © 2019 Simran Dhillon. All rights reserved.
-//
-
 import Foundation
 import Alamofire
-import SwiftyJSON
 import RxSwift
 import CoreData
 

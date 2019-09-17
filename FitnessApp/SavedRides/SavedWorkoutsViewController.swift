@@ -25,7 +25,7 @@ final class SavedWorkoutsViewController: UIViewController, UITableViewDataSource
         print("Created saved workouts view controller")
         savedActivitiesTable.dataSource = self
         savedActivitiesTable.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(loaddataSources), name: .activitiesLoaded, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(loaddataSources), name: .activitiesLoaded, object: nil)
         savedActivitiesTable.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
         setupNavBar()
         print("Finished saved workouts VC setup")

@@ -5,7 +5,7 @@ target 'FitnessApp' do
     pod 'RxCoreLocation', '~> 1.4'
     pod 'Alamofire', '~> 5.0.0-beta.5'
     pod 'SwiftyJSON', '~> 4.0'
-    pod 'Quick'
+    
 end
 
 target 'Tests' do
@@ -15,5 +15,5 @@ target 'Tests' do
     pod 'RxCoreLocation', '~> 1.4'
     pod 'Alamofire', '~> 5.0.0-beta.5'
     pod 'SwiftyJSON', '~> 4.0'
-    pod 'Quick'
+    
 end

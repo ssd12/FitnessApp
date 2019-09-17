@@ -32,7 +32,6 @@ final class FreeRideViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func setupViews() {
-      
         resetButton.rx.tap.bind {
             self.freeRideViewModel.resetRide()
         }
@@ -48,7 +47,17 @@ final class FreeRideViewController: UIViewController, MKMapViewDelegate {
         self.navigationController?.visibleViewController?.navigationItem.title = "Free Ride"
         
         self.navigationController?.visibleViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Activity Screen", style: .plain, target: self, action: #selector(exitPage))
+        self.navigationController?.navigationBar.isHidden = false
     }
+    
+    private func setupSubscriptions() {
+        let activityAdditionSubscription = freeRideViewModel.activityAddedObservable.subscribe(
+            onNext: { (activityAdded: Bool) -> Void in if (activityAdded) {AlertToast.show(message: "User Activity Added", controller: self)} },
+            onError: { (error: Error) -> Void in AlertToast.show(message: "Error adding user activity", controller: self)},
+            onCompleted: {},
+            onDisposed: {self.freeRideViewModel.bag.insert(self.freeRideViewModel.activityAddedObservable)})
+    }
+    
     
     @objc func savedRidesPressed() {
         print("Selector pressed")

@@ -5,7 +5,7 @@ struct Request {
     
     let parameters: [String:String]
     let requestType: RequestType
-    let baseURL = "http://35.163.133.28:5000"
+    let baseURL = "http://54.200.53.137:5000"
     
     func sendRequest() {
         switch requestType {
@@ -28,8 +28,7 @@ struct Request {
             print("Request: delete user")
             AF.request(baseURL+"/deleteUser", method: .delete, parameters:  parameters, encoding: JSONEncoding.default).responseJSON { response in self.handleResponse(response.result) }
         case .getUserActivities:
-            // TODO: force unwrapping for now, add an error endpoint later
-            AF.request(baseURL+"/"+parameters["username"]!, method: .get, parameters:  parameters, encoding: JSONEncoding.default).responseJSON { response in self.handleResponse(response.result) }
+            AF.request(baseURL+"/getActivities", method: .get, parameters:  parameters, encoding: JSONEncoding.default).responseJSON { response in self.handleResponse(response.result) }
         }
     }
     

@@ -9,9 +9,7 @@ final class RegistrationViewController: UIViewController, UIPickerViewDelegate, 
     @IBOutlet private weak var securityQuestionPicker: UIPickerView!
     @IBOutlet private weak var securityAnswerTextBox: UITextField!
     @IBOutlet private weak var registrationStatusLabel: UILabel!
-    
     @IBOutlet private weak var registrationSubmitButton: UIButton!
-    
     
     private var registrationViewModel = RegistrationViewModel()
     private var pickerSecurityQuestions = ["Name of Pet","City of Birth","Favorite Band"]
@@ -30,6 +28,7 @@ final class RegistrationViewController: UIViewController, UIPickerViewDelegate, 
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         registrationViewModel.rx.base.userRegistrationStatusDescription.bind(to: registrationStatusLabel.rx.text).disposed(by: registrationViewModel.disposeBag)
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

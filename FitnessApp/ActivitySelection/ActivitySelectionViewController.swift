@@ -11,8 +11,6 @@ import UIKit
 
 class ActivitySelectionViewController: UIViewController {
     
-    let networkUtilities = NetworkUtils()
-    
     override func viewDidLoad() {
         setupNavBar()
         let userLogoutStatusSubscription = ObserverService.shared.isUserLoggedOut.subscribe(onNext: handleUserLogOut(_:), onError: { (error: Error) -> Void in print(error) }, onCompleted: {}, onDisposed: {ObserverService.shared.disposeBag.insert(ObserverService.shared.isUserLoggedOut)})
@@ -21,12 +19,8 @@ class ActivitySelectionViewController: UIViewController {
     private func setupNavBar() {
         self.navigationController?.visibleViewController?.navigationItem.title = "Activity Selection"
         self.navigationController?.visibleViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self,  action: #selector(logoutUser))
-        
         self.navigationController?.visibleViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(accessUserSettings))
         self.navigationController?.navigationBar.isHidden = false
-        /*
-        _ = networkUtilities.logUserOut.subscribe(onNext: handleUserLogOut(_:), onError: handleUserLoginError(_:), onCompleted: handleUserLoginCompletion, onDisposed: handleUserLoginDisposale)
-         */
     }
     
     @IBAction func walkButtonpressed(_ sender: Any) {
