@@ -7,21 +7,25 @@ import UIKit
 class SavedWorkoutsViewModel {
     
     private(set) var savedActivities: [NSManagedObject] = []
-    //let networkUtils = NetworkUtils()
     
     init() {
-        print("SavedWorkoutsViewModel created")
-        //let userActivityLoadedSubscription = networkUtils.userActivitiesLoaded.subscribe(onNext: handleUserActivitiesLoaded(_:), onError: handleActivityLoadingError(_:), onCompleted: handleOnCompleted, onDisposed: handleOnCompleted)
+        setSubscriptions()
+        ActivityDatabase.shared.getActivities()
     }
     
-    func getAllUserActivities() {
-        let parameters = ["username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        print("Getting user activities with username: \(UserDefaults.standard.object(forKey: "username") as? String ?? "")")
-        //networkUtils.sendRequest(parameters,  .getUserActivities)
-        NetworkManager.shared.sendRequest(parameters, .getUserActivities)
-        print("Request sent to get all user activities")
+    private func setSubscriptions() {
+        let dataReadyToFetchSubscription = ActivityDatabase.shared.dataReadyToFetch.subscribe(
+            onNext: { (isReady: Bool) -> Void in if (isReady) { self.getActivityArray()} },
+            onError: { (error: Error) -> Void in print(error) },
+            onCompleted: {},
+            onDisposed: {ActivityDatabase.shared.dataReadyToFetch.dispose()})
     }
-
+    
+    //Get activity arrray from DB
+    private func getActivityArray() {
+        print("Getting activity array")
+    }
+    
     func loadSavedActivities() {
         print("Loading saved activites")
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
@@ -37,22 +41,6 @@ class SavedWorkoutsViewModel {
         print("Number of saved activites: \(savedActivities.count)")
         let activitiesToPost = ["activities":savedActivities]
         NotificationCenter.default.post(name: .activitiesLoaded, object: nil, userInfo: activitiesToPost )
-    }
-    
-    func handleUserActivitiesLoaded(_ status: Bool) {
-        if (status) {
-            print("User activities loaded status: \(status)")
-            loadSavedActivities()
-        } else {
-            print("Activities not loaded yet")
-        }
-    }
-    
-    func handleActivityLoadingError(_ error: Error) {
-        print("There was an error loading the acitivites into Core Data")
-    }
-    
-    func handleOnCompleted() {
     }
     
     //deletes from CoreData first, and then sends request to delete on mongo
@@ -74,7 +62,6 @@ class SavedWorkoutsViewModel {
         
         
         let parameters = ["activityID":id, "username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        //networkUtils.sendRequest(parameters, .removeUserActivity)
         print("Deleted activity with id: \(id)")
     }
     

@@ -12,9 +12,6 @@ import CoreData
 
 final class SavedWorkoutsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    
-    
     private let savedRidesVM = SavedWorkoutsViewModel()
     private var dataSource: [NSManagedObject] = []
     
@@ -22,14 +19,11 @@ final class SavedWorkoutsViewController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Created saved workouts view controller")
         savedActivitiesTable.dataSource = self
         savedActivitiesTable.delegate = self
-        //NotificationCenter.default.addObserver(self, selector: #selector(loaddataSources), name: .activitiesLoaded, object: nil)
         savedActivitiesTable.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
         setupNavBar()
         print("Finished saved workouts VC setup")
-        savedRidesVM.getAllUserActivities()
     }
  
     private func setupNavBar() {

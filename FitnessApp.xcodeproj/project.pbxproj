@@ -30,6 +30,7 @@
 		5C23A8AE232D2C09004BADBC /* ObserverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AD232D2C09004BADBC /* ObserverService.swift */; };
 		5C23A8B0232D3910004BADBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AF232D390F004BADBC /* User.swift */; };
 		5C23A8B22330514D004BADBC /* ActivityDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8B12330514C004BADBC /* ActivityDatabase.swift */; };
+		5C23A8B4233168F0004BADBC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8B3233168EF004BADBC /* Activity.swift */; };
 		5C26822522D4F94800A71C10 /* IntervalRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */; };
 		5C26822722D4FB2000A71C10 /* IntervalRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */; };
 		5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */; };
@@ -113,6 +114,7 @@
 		5C23A8AD232D2C09004BADBC /* ObserverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverService.swift; sourceTree = "<group>"; };
 		5C23A8AF232D390F004BADBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5C23A8B12330514C004BADBC /* ActivityDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDatabase.swift; sourceTree = "<group>"; };
+		5C23A8B3233168EF004BADBC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		5C26822422D4F94800A71C10 /* IntervalRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRideViewController.swift; sourceTree = "<group>"; };
 		5C26822622D4FB2000A71C10 /* IntervalRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntervalRideViewController.xib; sourceTree = "<group>"; };
 		5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeRideViewController.xib; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			children = (
 				5C7BFB712118F73E004DE4F2 /* SingleDistanceRide.swift */,
 				5C7BFB7521192E5A004DE4F2 /* WorkoutRide.swift */,
+				5C23A8B3233168EF004BADBC /* Activity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				5CAF726421EA980E009D5D66 /* WorkoutRideProtocol.swift in Sources */,
 				5C282E3222A4A277007A4E4C /* FreeRideViewController.swift in Sources */,
 				5C0B53B8211B7ED00027BE8B /* mainNavigiationController.swift in Sources */,
+				5C23A8B4233168F0004BADBC /* Activity.swift in Sources */,
 				5C7BFB3F21128E7C004DE4F2 /* AppDelegate.swift in Sources */,
 				5C06D1C0230AE81400F74682 /* ActivitySelectionViewController.swift in Sources */,
 				5C22BC1322C8132C008C1C2D /* IntervalRideViewModel.swift in Sources */,

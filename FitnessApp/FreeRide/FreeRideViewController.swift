@@ -52,12 +52,11 @@ final class FreeRideViewController: UIViewController, MKMapViewDelegate {
     
     private func setupSubscriptions() {
         let activityAdditionSubscription = freeRideViewModel.activityAddedObservable.subscribe(
-            onNext: { (activityAdded: Bool) -> Void in if (activityAdded) {AlertToast.show(message: "User Activity Added", controller: self)} },
-            onError: { (error: Error) -> Void in AlertToast.show(message: "Error adding user activity", controller: self)},
+            onNext: { (activityAdded: Bool) -> Void in if (activityAdded) { print("Activity Added")}},
+            onError: { (error: Error) -> Void in print(error)},
             onCompleted: {},
             onDisposed: {self.freeRideViewModel.bag.insert(self.freeRideViewModel.activityAddedObservable)})
     }
-    
     
     @objc func savedRidesPressed() {
         print("Selector pressed")

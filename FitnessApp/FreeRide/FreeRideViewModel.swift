@@ -116,8 +116,6 @@ class FreeRideViewModel: ReactiveCompatible {
         print("timestamp description: \(timestamp.description)")
         let activityID = timestamp.description
         let parameters = ["activityID":activityID,"activityType":activityType,"distance":String(totalDistance),"time": String(totalTime),"username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
-        //let networkUtils = NetworkUtils()
-        //networkUtils.sendRequest(parameters, .addNewActivity)
         NetworkManager.shared.sendRequest(parameters, .addNewActivity)
         NotificationCenter.default.post(name: .rideSaved, object: nil)
     }

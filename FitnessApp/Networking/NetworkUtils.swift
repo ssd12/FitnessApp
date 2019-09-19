@@ -67,18 +67,17 @@ class NetworkUtils {
                 }
             }
         case .getUserActivities:
-            AF.request(baseURL+"/"+parameters["username"]!, method: .get, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
-                response in
-                switch response.result {
-                case .success(let value):
-                    let responseValue = value as? [String:AnyObject]
-                    guard let allActivities = responseValue!["allActivities"] as? [Dictionary<String,String>] else { return }
-                    print("allActivities: \(allActivities) type: \(type(of: allActivities))")
-                    self.saveUserActivities(allActivities)
-                case .failure(let error):
-                    print(error)
-                }
-            }
+            //AF.request(baseURL+"/getActivities", method: .get, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
+           //     response in
+           //     switch response.result {
+           //     case .success(let value):
+            //        let responseValue = value as? [String:AnyObject]
+             //       guard let allActivities = responseValue!["allActivities"] as? [Dictionary<String,String>] else { return }
+              //      print("allActivities: \(allActivities) type: \(type(of: allActivities))")
+              //      self.saveUserActivities(allActivities)
+               // case .failure(let error):
+                //    print(error)
+                print("activites")
         }
     }
     

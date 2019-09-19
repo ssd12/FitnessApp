@@ -13,6 +13,7 @@ class ObserverService {
     let registrationStatusDescription: BehaviorSubject<String> = BehaviorSubject(value: "")
     let userAccountDeletedSuccesful: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     let userActiviyAddedSuccessful: BehaviorSubject<Bool> = BehaviorSubject(value: false)
+    let allActivityDataFetched: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     
     init() {
         
@@ -49,10 +50,16 @@ class ObserverService {
             userLoginStatusDescription.onNext(info)
         case .userActivitiesFetched:
             print("Fetched all user activites")
-            print(info)
         case .error:
             print("Error")
         }
     }
-    
+ 
+    func emitObservable( _ info: [Dictionary<String, String>]) {
+        print("User Activities Fetched")
+        ActivityDatabase.shared.setActivityDictionary(info)
+        print("Activity dictionary set")
+        allActivityDataFetched.onNext(true)
+        print("Observable sent")
+    }
 }

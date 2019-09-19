@@ -5,7 +5,7 @@ struct Request {
     
     let parameters: [String:String]
     let requestType: RequestType
-    let baseURL = "http://54.200.53.137:5000"
+    let baseURL = "http://54.186.174.132:5000"
     
     func sendRequest() {
         switch requestType {
@@ -28,7 +28,8 @@ struct Request {
             print("Request: delete user")
             AF.request(baseURL+"/deleteUser", method: .delete, parameters:  parameters, encoding: JSONEncoding.default).responseJSON { response in self.handleResponse(response.result) }
         case .getUserActivities:
-            AF.request(baseURL+"/getActivities", method: .get, parameters:  parameters, encoding: JSONEncoding.default).responseJSON { response in self.handleResponse(response.result) }
+            print("Request: get all user activities")
+            AF.request(baseURL+"/getUserActivities", method: .post, parameters:  parameters, encoding: JSONEncoding.default).responseJSON { response in self.handleResponse(response.result) }
         }
     }
     
@@ -37,9 +38,15 @@ struct Request {
         case .success(let responseValue):
             print("Handling response from server")
             print("Response Value: \(responseValue)")
-            guard let response = responseValue as? [String:String] else { return }
+            //guard let response = responseValue as? [String:String] else {
+            //    print("getting different format")
+            //    print("responseValue type: \(type(of: responseValue))")
+            //    let response = responseValue as? [String:AnyObject];
+            //   _ = Parser(responseValue as AnyObject)
+            //    }
+            guard let response = responseValue as? [String:AnyObject] else { return }
             print("response: \(response)")
-            let parser = Parser(responseValue as AnyObject)
+            _ = Parser(responseValue as AnyObject)
         case .failure(let responseError):
             print("Handling error from server")
             print("Response error: \(responseError)")
