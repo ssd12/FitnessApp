@@ -5,7 +5,7 @@ struct Request {
     
     let parameters: [String:String]
     let requestType: RequestType
-    let baseURL = "http://54.186.174.132:5000"
+    let baseURL = "http://34.212.22.226:5000"
     
     func sendRequest() {
         switch requestType {
@@ -65,6 +65,3 @@ enum RequestType: String {
     case deleteUser = "deleteUser"
     case getUserActivities = "getUserActivities"
 }
-
-
-

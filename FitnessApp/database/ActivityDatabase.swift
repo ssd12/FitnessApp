@@ -10,8 +10,11 @@ class ActivityDatabase {
     var dataReadyToFetch: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     private var allActivitiesArray: [Activity] = [Activity]()
     private var allActivities: [Dictionary<String, String>] = [Dictionary<String, String>]()
+    private let appDelegate = UIApplication.shared.delegate
+    private var context: NSManagedObjectContext
     
     init() {
+        context = (appDelegate as? AppDelegate)!.persistentContainer.viewContext
         setSubscriptions()
     }
     
@@ -35,12 +38,32 @@ class ActivityDatabase {
     }
     
     private func loadIntoCoreData() {
-        print("all activities dictionary: \(allActivities)")
-        print("Saving user activity information in Core Data")
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+       print("all activities dictionary: \(allActivities)")
+        clearDB()
+        addActivitiesToDB()
+    }
+    
+    //clear core data db
+    private func clearDB() {
+        let getCurrentActivitiesRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FitnessActivity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: getCurrentActivitiesRequest)
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+            // check to make sure it's cleared
+            let activities = try context.fetch(getCurrentActivitiesRequest)
+            guard let allNSManangedObject = try activities as? [NSManagedObject] else  { print("error getting nsmanaged object result"); return}
+            print("No. of NSManagedObjects: \(allNSManangedObject.count)")
+            allActivitiesArray.removeAll()
+            print("All activities array count: \(allActivitiesArray.count)")
+            print("Core Data db cleared")
+        } catch {
+            print("error clearing db")
         }
-        let context = appDelegate.persistentContainer.viewContext
+    }
+    
+    private func addActivitiesToDB() {
+        print("Adding activities to Core Data")
         let entity = NSEntityDescription.entity(forEntityName: "FitnessActivity", in: context)!
         let getCurrentActivitiesRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FitnessActivity")
         var allActivityIDs = [String]()
@@ -49,13 +72,15 @@ class ActivityDatabase {
             for data in result as! [NSManagedObject] {
                 allActivityIDs.append(data.value(forKey: "activityID") as? String ?? "")
             }
+            print("[NSManangedObject] count: \(result.count)")
         } catch {
             print("Fetch request failed")
         }
         print("Current activity IDs present: \(allActivityIDs)")
         for activity in allActivities {
             if (allActivityIDs.contains(activity["activityID"]!)) {
-                print("Activity already exists")
+                //do nothing
+                print("activity already exists")
             } else {
                 print("Adding new activity")
                 let fitnessActivity = NSManagedObject(entity: entity, insertInto: context)
@@ -76,11 +101,30 @@ class ActivityDatabase {
             }
         }
         print("All activities loaded")
+        print("allActivitiesArray count: \(allActivitiesArray.count)")
         dataReadyToFetch.onNext(true)
     }
     
+    
     func deleteActivity(_ id: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FitnessActivity")
+        fetchRequest.predicate = NSPredicate(format:"activityID=%@", id)
         
+        do {
+            let test = try context.fetch(fetchRequest)
+            let objectToDelete = test[0] as! NSManagedObject
+            context.delete(objectToDelete)
+            
+            do {
+                try context.save()
+            } catch { print(error) }
+        } catch { print(error) }
+        
+        let parameters = ["activityID":id, "username":UserDefaults.standard.object(forKey: "username") as? String ?? ""]
+        NetworkManager.shared.sendRequest(parameters, .removeUserActivity)
+        print("Sent request to delete activity with id: \(id)")
     }
     
     func fetchActivities() -> [Activity] {

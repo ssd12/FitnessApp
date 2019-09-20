@@ -44,6 +44,8 @@ class ObserverService {
         case .activityAdded:
             print("Activity Added")
             userActiviyAddedSuccessful.onNext(true)
+        case .activityDeleted:
+            print("Activity deleted info: \(info)")
         case .userDeleted:
             print("User account deleted")
             userAccountDeletedSuccesful.onNext(false)

@@ -56,6 +56,7 @@ final class Utilities {
         case registrationSuccessful = "registrationSuccessful"
         case registrationError = "registrationError"
         case activityAdded = "activityAdded"
+        case activityDeleted = "activityDeleted"
         case userDeleted = "userDeleted"
         case userActivitiesFetched = "userActivitiesFetched"
         case error = "error"
