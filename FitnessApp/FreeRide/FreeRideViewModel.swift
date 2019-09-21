@@ -130,4 +130,5 @@ extension Notification.Name {
     static let rideSaved = Notification.Name("rideSaved")
     static let stopwatchTimeUpdated = Notification.Name("stopwatchTimeUpdated")
     static let locationUpdate = Notification.Name("locationUpdate")
+    static let elapsedTimeUpdated = Notification.Name("elapsedTimeUpdated")
 }
