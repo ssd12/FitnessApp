@@ -8,7 +8,7 @@ class ActivityDatabase {
  
     static let shared = ActivityDatabase()
     var dataReadyToFetch: BehaviorSubject<Bool> = BehaviorSubject(value: false)
-    private var allActivitiesArray: [Activity] = [Activity]()
+    private var allActivitiesArray: [ActivityModel] = [ActivityModel]()
     private var allActivities: [Dictionary<String, String>] = [Dictionary<String, String>]()
     private let appDelegate = UIApplication.shared.delegate
     private var context: NSManagedObjectContext
@@ -90,7 +90,7 @@ class ActivityDatabase {
                 fitnessActivity.setValue(activity["time"],forKeyPath: "time")
                 let basicRideDescription = activity["activityType"] ?? "unknown activity" + " on: " + (activity["activityID"] ?? "unknown date")
                 fitnessActivity.setValue(basicRideDescription, forKeyPath: "rideDescription")
-                let newActivity = Activity(activityID: activity["activityID"]!, activityType: activity["activityType"]!, distance: activity["distance"]!, time: activity["time"]!)
+                let newActivity = ActivityModel(activityID: activity["activityID"]!, activityType: activity["activityType"]!, distance: activity["distance"]!, time: activity["time"]!)
                 allActivitiesArray.append(newActivity)
                 do {
                     try context.save()
@@ -127,7 +127,7 @@ class ActivityDatabase {
         print("Sent request to delete activity with id: \(id)")
     }
     
-    func fetchActivities() -> [Activity] {
+    func fetchActivities() -> [ActivityModel] {
         print("Num. of activities: \(allActivitiesArray.count)")
         return allActivitiesArray
     }

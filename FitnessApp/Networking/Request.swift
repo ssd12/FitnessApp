@@ -5,7 +5,7 @@ struct Request {
     
     let parameters: [String:String]
     let requestType: RequestType
-    let baseURL = "http://34.212.22.226:5000"
+    let baseURL = "http://[INSERT IP AND PORT]"
     
     func sendRequest() {
         switch requestType {

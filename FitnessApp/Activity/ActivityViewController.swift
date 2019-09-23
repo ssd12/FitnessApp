@@ -11,9 +11,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-final class FreeRideViewController: UIViewController, MKMapViewDelegate {
+final class ActivityViewController: UIViewController, MKMapViewDelegate {
     
-    private var freeRideViewModel = FreeRideViewModel()
+    private var activityViewModel = ActivityViewModel()
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -33,7 +33,7 @@ final class FreeRideViewController: UIViewController, MKMapViewDelegate {
     
     private func setupViews() {
         resetButton.rx.tap.bind {
-            self.freeRideViewModel.resetRide()
+            self.activityViewModel.resetRide()
         }
         NotificationCenter.default.addObserver(self, selector: #selector(distanceUpdate), name: .freeRideDistanceUpdated, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(stopwatchTimeUpdate), name: .elapsedTimeUpdated, object: nil)
@@ -51,73 +51,72 @@ final class FreeRideViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func setupSubscriptions() {
-        let activityAdditionSubscription = freeRideViewModel.activityAddedObservable.subscribe(
+        let activityAdditionSubscription = activityViewModel.activityAddedObservable.subscribe(
             onNext: { (activityAdded: Bool) -> Void in if (activityAdded) { print("Activity Added")}},
             onError: { (error: Error) -> Void in print(error)},
             onCompleted: {},
-            onDisposed: {self.freeRideViewModel.bag.insert(self.freeRideViewModel.activityAddedObservable)})
+            onDisposed: {self.activityViewModel.bag.insert(self.activityViewModel.activityAddedObservable)})
     }
     
     @objc func savedRidesPressed() {
         print("Selector pressed")
-        if (freeRideViewModel.activityInSession) {
-            freeRideViewModel.pauseRide()
+        if (activityViewModel.activityInSession) {
+            activityViewModel.pauseRide()
             activityExitAlert("Activity stopped. Continue to Saved Rides screen or press start to resume activity.")
         } else {
-            let savedWorkoutsVC = SavedWorkoutsViewController()
+            let savedWorkoutsVC = SavedActivitiesViewController()
             navigationController?.pushViewController(savedWorkoutsVC, animated: true)
         }
     }
   
     @IBAction func startButtonPressed(_ sender: Any) {
-        freeRideViewModel.startRide()
+        activityViewModel.startRide()
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
-        freeRideViewModel.stopRide()
+        activityViewModel.stopRide()
     }
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
-        freeRideViewModel.pauseRide()
+        activityViewModel.pauseRide()
     }
     
-    
     @IBAction func saveButtonPressed(_ sender: Any) {
-        if (freeRideViewModel.activityInSession){
-            freeRideViewModel.pauseRide()
+        if (activityViewModel.activityInSession){
+            activityViewModel.pauseRide()
             activityExitAlert("Activity Stopped. Close alert and save ride, or resume activity.")
         } else {
-            freeRideViewModel.saveRide(activityType)
+            activityViewModel.saveRide(activityType)
         }
     }
     
     @objc func distanceUpdate() {
         print("Updating distance")
-        totalDistanceLabel.text = String(freeRideViewModel.totalDistance)
+        totalDistanceLabel.text = String(activityViewModel.totalDistance)
     }
     
     @objc func stopwatchTimeUpdate() {
         print("Updating time")
-        timeLabel.text = String(freeRideViewModel.totalTime)
+        timeLabel.text = String(activityViewModel.totalTime)
     }
     
     @objc func locationUpdate(){
         print("Updating location")
-        print("Location: \(freeRideViewModel.currentLocation.coordinate)")
-        annotateMap(freeRideViewModel.currentLocation.coordinate)
+        print("Location: \(activityViewModel.currentLocation.coordinate)")
+        annotateMap(activityViewModel.currentLocation.coordinate)
     }
     
     @objc func rideStopped() {
-        let speed = String(format: "%.2f", freeRideViewModel.getAverageSpeed())
+        let speed = String(format: "%.2f", activityViewModel.getAverageSpeed())
         speedLabel.text = speed
     }
     
     @objc func exitPage() {
-        if (freeRideViewModel.activityInSession){
-            freeRideViewModel.pauseRide()
+        if (activityViewModel.activityInSession){
+            activityViewModel.pauseRide()
             activityExitAlert("Activity stopped. Continue to Activity Selection screen or press start to resume activity.")
         } else {
-            freeRideViewModel.stopRide()
+            activityViewModel.stopRide()
             navigationController?.popViewController(animated: true)
         }
     }

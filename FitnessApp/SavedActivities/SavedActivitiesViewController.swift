@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import CoreData
 
-final class SavedWorkoutsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class SavedActivitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private let savedRidesVM = SavedWorkoutsViewModel()
-    private var dataSource: [Activity] = []
+    private let savedRidesVM = SavedActivitiesViewModel()
+    private var dataSource: [ActivityModel] = []
     
     @IBOutlet weak var savedActivitiesTable: UITableView!
     

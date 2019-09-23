@@ -12,7 +12,7 @@ import RxCocoa
 import CoreLocation
 import Alamofire
 
-class FreeRideViewModel: ReactiveCompatible {
+class ActivityViewModel: ReactiveCompatible {
     
     private(set) var totalDistance: Double = 0.0
     private(set) var totalTime: Double = 0.0
@@ -33,9 +33,19 @@ class FreeRideViewModel: ReactiveCompatible {
     func startRide() {
         location.subscribeToLocation()
         stopWatch.startStopWatch()
-        let distanceUpdateSubscription = location.totalDistance.subscribe(onNext: totalDistanceObserved(_:), onError: handleObserverError(_:), onCompleted: handleObserverCompletion, onDisposed: handleObserverDisposal)
-        let stopwatchUpdateSubscription = stopWatch.elapsedTimeSubject.subscribe(onNext: timeElapsedObserved(_:), onError: handleObserverError(_:), onCompleted: handleObserverCompletion, onDisposed: handleObserverDisposal)
-        let locationUpdateSubscription = location.locationCoordinates.subscribe(onNext: locationUpdateObserved(_:), onError: handleObserverError(_:), onCompleted: handleObserverCompletion, onDisposed: handleObserverDisposal)
+        let distanceUpdateSubscription = location.totalDistance.subscribe(
+            onNext: totalDistanceObserved(_:),
+            onError: { (error: Error) -> Void in print(error)},
+            onCompleted: {},
+            onDisposed: {self.location.totalDistance.dispose()})
+        let stopwatchUpdateSubscription = stopWatch.elapsedTimeSubject.subscribe(onNext: timeElapsedObserved(_:),
+            onError: { (error: Error) -> Void in print(error)},
+            onCompleted: {}, onDisposed: {self.stopWatch.elapsedTimeSubject.dispose()})
+        let locationUpdateSubscription = location.locationCoordinates.subscribe(
+            onNext: locationUpdateObserved(_:),
+            onError: { (error: Error) -> Void in print(error)},
+            onCompleted: {},
+            onDisposed: {self.location.locationCoordinates.dispose()})
         activityInSession = true
     }
     
@@ -67,24 +77,12 @@ class FreeRideViewModel: ReactiveCompatible {
     
     private func metersToMiles(_ distanceToConvert: Double) -> Double {
         let distanceInMiles = (distanceToConvert/1609.34)
-        return ( Double(round(10*distanceInMiles)/10))
+        return (Double(round(10*distanceInMiles)/10))
     }
     
     func getAverageSpeed() -> Double {
         let speed = totalDistance/(totalTime)
         return speed/3600
-    }
-    
-    private func handleObserverError(_ error: Error) {
-        print("Error while observing distance or time")
-    }
-    
-    private func handleObserverCompletion() {
-        print("Distance observed")
-    }
-    
-    private func handleObserverDisposal() {
-        print("Observable disposed")
     }
     
     func stopRide() {

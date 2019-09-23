@@ -21,29 +21,26 @@
 		5C23A8942326DD4F004BADBC /* NetworkMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8932326DD4F004BADBC /* NetworkMananger.swift */; };
 		5C23A8962326F6EE004BADBC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8952326F6EE004BADBC /* Request.swift */; };
 		5C23A8A223284241004BADBC /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8A123284241004BADBC /* Tests.swift */; };
-		5C23A8AA2329DB0D004BADBC /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8A92329DB0D004BADBC /* AlertToast.swift */; };
 		5C23A8AC2329F842004BADBC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AB2329F842004BADBC /* Parser.swift */; };
 		5C23A8AE232D2C09004BADBC /* ObserverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AD232D2C09004BADBC /* ObserverService.swift */; };
 		5C23A8B0232D3910004BADBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8AF232D390F004BADBC /* User.swift */; };
 		5C23A8B22330514D004BADBC /* ActivityDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8B12330514C004BADBC /* ActivityDatabase.swift */; };
-		5C23A8B4233168F0004BADBC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8B3233168EF004BADBC /* Activity.swift */; };
-		5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */; };
+		5C23A8B4233168F0004BADBC /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23A8B3233168EF004BADBC /* ActivityModel.swift */; };
+		5C26822922D4FC9F00A71C10 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C26822822D4FC9F00A71C10 /* ActivityViewController.xib */; };
 		5C26BB6122DF8D4D0041061F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26BB6022DF8D4D0041061F /* Location.swift */; };
-		5C282E3222A4A277007A4E4C /* FreeRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C282E3122A4A277007A4E4C /* FreeRideViewController.swift */; };
-		5C282E3422A4A698007A4E4C /* FreeRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C282E3322A4A698007A4E4C /* FreeRideViewModel.swift */; };
+		5C282E3222A4A277007A4E4C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C282E3122A4A277007A4E4C /* ActivityViewController.swift */; };
+		5C282E3422A4A698007A4E4C /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C282E3322A4A698007A4E4C /* ActivityViewModel.swift */; };
 		5C7BFB3F21128E7C004DE4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB3E21128E7C004DE4F2 /* AppDelegate.swift */; };
 		5C7BFB4421128E7C004DE4F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4221128E7C004DE4F2 /* Main.storyboard */; };
-		5C7BFB4721128E7C004DE4F2 /* BikeRideApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */; };
 		5C7BFB4921128E83004DE4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4821128E83004DE4F2 /* Assets.xcassets */; };
 		5C7BFB4C21128E83004DE4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BFB4A21128E83004DE4F2 /* LaunchScreen.storyboard */; };
 		5C7BFB6221128E84004DE4F2 /* FitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */; };
-		5C7C39C922DA6F4D00444733 /* SavedWorkoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C39C822DA6F4D00444733 /* SavedWorkoutsViewModel.swift */; };
-		5C7C39D022DA943800444733 /* SavedWorkoutsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C39CF22DA943800444733 /* SavedWorkoutsViewController.xib */; };
-		5C7C39D222DA955E00444733 /* SavedWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C39D122DA955E00444733 /* SavedWorkoutsViewController.swift */; };
+		5C7C39C922DA6F4D00444733 /* SavedActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C39C822DA6F4D00444733 /* SavedActivitiesViewModel.swift */; };
+		5C7C39D022DA943800444733 /* SavedActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C39CF22DA943800444733 /* SavedActivitiesViewController.xib */; };
+		5C7C39D222DA955E00444733 /* SavedActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C39D122DA955E00444733 /* SavedActivitiesViewController.swift */; };
 		5C7C5B25211E62CC00FA2326 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C5B24211E62CC00FA2326 /* CoreData.framework */; };
 		5C8132E222CE553200C58AEC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8132E122CE553200C58AEC /* Utilities.swift */; };
 		5CA5F8AC21BC27A00034687A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA5F8AB21BC27A00034687A /* MapKit.framework */; };
-		5CB54CAC22F37B8400A107F6 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */; };
 		5CB54CB122F5B34E00A107F6 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */; };
 		5CB54CB322F5B40B00A107F6 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */; };
 		5CB54CB522F5C33600A107F6 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */; };
@@ -91,20 +88,18 @@
 		5C23A89F23284241004BADBC /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C23A8A123284241004BADBC /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		5C23A8A323284241004BADBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C23A8A92329DB0D004BADBC /* AlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
 		5C23A8AB2329F842004BADBC /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		5C23A8AD232D2C09004BADBC /* ObserverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverService.swift; sourceTree = "<group>"; };
 		5C23A8AF232D390F004BADBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5C23A8B12330514C004BADBC /* ActivityDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDatabase.swift; sourceTree = "<group>"; };
-		5C23A8B3233168EF004BADBC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeRideViewController.xib; sourceTree = "<group>"; };
+		5C23A8B3233168EF004BADBC /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityModel.swift; path = ../Models/ActivityModel.swift; sourceTree = "<group>"; };
+		5C26822822D4FC9F00A71C10 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		5C26BB6022DF8D4D0041061F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		5C282E3122A4A277007A4E4C /* FreeRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRideViewController.swift; sourceTree = "<group>"; };
-		5C282E3322A4A698007A4E4C /* FreeRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRideViewModel.swift; sourceTree = "<group>"; };
+		5C282E3122A4A277007A4E4C /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		5C282E3322A4A698007A4E4C /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		5C7BFB3B21128E7C004DE4F2 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7BFB3E21128E7C004DE4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C7BFB4321128E7C004DE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C7BFB4621128E7C004DE4F2 /* BikeRideApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BikeRideApp.xcdatamodel; sourceTree = "<group>"; };
 		5C7BFB4821128E83004DE4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C7BFB4B21128E83004DE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7BFB4D21128E83004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,13 +107,12 @@
 		5C7BFB5D21128E84004DE4F2 /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7BFB6121128E84004DE4F2 /* FitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITests.swift; sourceTree = "<group>"; };
 		5C7BFB6321128E84004DE4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C7C39C822DA6F4D00444733 /* SavedWorkoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkoutsViewModel.swift; sourceTree = "<group>"; };
-		5C7C39CF22DA943800444733 /* SavedWorkoutsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedWorkoutsViewController.xib; sourceTree = "<group>"; };
-		5C7C39D122DA955E00444733 /* SavedWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkoutsViewController.swift; sourceTree = "<group>"; };
+		5C7C39C822DA6F4D00444733 /* SavedActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedActivitiesViewModel.swift; sourceTree = "<group>"; };
+		5C7C39CF22DA943800444733 /* SavedActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedActivitiesViewController.xib; sourceTree = "<group>"; };
+		5C7C39D122DA955E00444733 /* SavedActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedActivitiesViewController.swift; sourceTree = "<group>"; };
 		5C7C5B24211E62CC00FA2326 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5C8132E122CE553200C58AEC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5CA5F8AB21BC27A00034687A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		5CB54CB022F5B34E00A107F6 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		5CB54CB222F5B40B00A107F6 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		5CB54CB422F5C33600A107F6 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
@@ -219,15 +213,15 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		5C282E2F22A4849E007A4E4C /* FreeRide */ = {
+		5C282E2F22A4849E007A4E4C /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				5C282E3122A4A277007A4E4C /* FreeRideViewController.swift */,
-				5C282E3322A4A698007A4E4C /* FreeRideViewModel.swift */,
-				5C26822822D4FC9F00A71C10 /* FreeRideViewController.xib */,
+				5C282E3122A4A277007A4E4C /* ActivityViewController.swift */,
+				5C282E3322A4A698007A4E4C /* ActivityViewModel.swift */,
+				5C26822822D4FC9F00A71C10 /* ActivityViewController.xib */,
 				5C04D49323049B8000D2AAEA /* Stopwatch.swift */,
 			);
-			path = FreeRide;
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		5C7BFB3221128E7C004DE4F2 = {
@@ -262,13 +256,12 @@
 				5C08AEE122FC80D600AED57B /* Registration */,
 				5CB54CAF22F5B32D00A107F6 /* LoginScreen */,
 				5CB54CAA22F37B6000A107F6 /* Networking */,
-				5C7C39CA22DA6F5300444733 /* SavedRides */,
+				5C7C39CA22DA6F5300444733 /* SavedActivities */,
 				5C8132E022CE52D500C58AEC /* Utilities */,
 				5C22BC1422C94607008C1C2D /* Location */,
-				5C282E2F22A4849E007A4E4C /* FreeRide */,
+				5C282E2F22A4849E007A4E4C /* Activity */,
 				5CAF725B21EA5B10009D5D66 /* database */,
 				5CAF725A21EA50FF009D5D66 /* Views */,
-				5CAF725821EA50DA009D5D66 /* Models */,
 				5C7BFB3E21128E7C004DE4F2 /* AppDelegate.swift */,
 				5C7BFB4821128E83004DE4F2 /* Assets.xcassets */,
 				5C7BFB4D21128E83004DE4F2 /* Info.plist */,
@@ -285,14 +278,14 @@
 			path = FitnessAppUITests;
 			sourceTree = "<group>";
 		};
-		5C7C39CA22DA6F5300444733 /* SavedRides */ = {
+		5C7C39CA22DA6F5300444733 /* SavedActivities */ = {
 			isa = PBXGroup;
 			children = (
-				5C7C39C822DA6F4D00444733 /* SavedWorkoutsViewModel.swift */,
-				5C7C39CF22DA943800444733 /* SavedWorkoutsViewController.xib */,
-				5C7C39D122DA955E00444733 /* SavedWorkoutsViewController.swift */,
+				5C7C39C822DA6F4D00444733 /* SavedActivitiesViewModel.swift */,
+				5C7C39CF22DA943800444733 /* SavedActivitiesViewController.xib */,
+				5C7C39D122DA955E00444733 /* SavedActivitiesViewController.swift */,
 			);
-			path = SavedRides;
+			path = SavedActivities;
 			sourceTree = "<group>";
 		};
 		5C7C5B23211E62CC00FA2326 /* Frameworks */ = {
@@ -310,18 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				5C8132E122CE553200C58AEC /* Utilities.swift */,
-				5C23A8A92329DB0D004BADBC /* AlertToast.swift */,
 				5C23A8AD232D2C09004BADBC /* ObserverService.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		5CAF725821EA50DA009D5D66 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5C23A8B3233168EF004BADBC /* Activity.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		5CAF725A21EA50FF009D5D66 /* Views */ = {
@@ -336,7 +320,7 @@
 		5CAF725B21EA5B10009D5D66 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */,
+				5C23A8B3233168EF004BADBC /* ActivityModel.swift */,
 				5C0ED34D230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld */,
 				5C23A8B12330514C004BADBC /* ActivityDatabase.swift */,
 			);
@@ -346,7 +330,6 @@
 		5CB54CAA22F37B6000A107F6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5CB54CAB22F37B8400A107F6 /* NetworkUtils.swift */,
 				5C23A8932326DD4F004BADBC /* NetworkMananger.swift */,
 				5C23A8952326F6EE004BADBC /* Request.swift */,
 				5C23A8AB2329F842004BADBC /* Parser.swift */,
@@ -524,8 +507,8 @@
 				5C08AEE722FCD58A00AED57B /* RegistrationViewController.xib in Resources */,
 				5C06D1C4230AE95200F74682 /* ActivitySelectionViewController.xib in Resources */,
 				5C7BFB4921128E83004DE4F2 /* Assets.xcassets in Resources */,
-				5C26822922D4FC9F00A71C10 /* FreeRideViewController.xib in Resources */,
-				5C7C39D022DA943800444733 /* SavedWorkoutsViewController.xib in Resources */,
+				5C26822922D4FC9F00A71C10 /* ActivityViewController.xib in Resources */,
+				5C7C39D022DA943800444733 /* SavedActivitiesViewController.xib in Resources */,
 				5CB54CB522F5C33600A107F6 /* LoginScreenViewController.xib in Resources */,
 				5C7BFB4421128E7C004DE4F2 /* Main.storyboard in Resources */,
 			);
@@ -609,28 +592,25 @@
 			files = (
 				5C23A8B22330514D004BADBC /* ActivityDatabase.swift in Sources */,
 				5C04D49423049B8000D2AAEA /* Stopwatch.swift in Sources */,
-				5CB54CAC22F37B8400A107F6 /* NetworkUtils.swift in Sources */,
 				5CB54CB322F5B40B00A107F6 /* LoginScreenViewController.swift in Sources */,
 				5C0ED34C230C5B2100F20832 /* UserCredentials.swift in Sources */,
-				5C7BFB4721128E7C004DE4F2 /* BikeRideApp.xcdatamodeld in Sources */,
 				5CB54CB122F5B34E00A107F6 /* LoginScreenViewModel.swift in Sources */,
 				5C23A8942326DD4F004BADBC /* NetworkMananger.swift in Sources */,
 				5C26BB6122DF8D4D0041061F /* Location.swift in Sources */,
 				5C0ED352230F2EF700F20832 /* UserSettingsPageViewController.swift in Sources */,
 				5C8132E222CE553200C58AEC /* Utilities.swift in Sources */,
 				5C23A8AE232D2C09004BADBC /* ObserverService.swift in Sources */,
-				5C23A8AA2329DB0D004BADBC /* AlertToast.swift in Sources */,
-				5C7C39C922DA6F4D00444733 /* SavedWorkoutsViewModel.swift in Sources */,
+				5C7C39C922DA6F4D00444733 /* SavedActivitiesViewModel.swift in Sources */,
 				5C23A8962326F6EE004BADBC /* Request.swift in Sources */,
 				5C0ED34F230DD8F100F20832 /* FitnessAppDataModel.xcdatamodeld in Sources */,
 				5C08AEE322FC85CE00AED57B /* RegistrationViewModel.swift in Sources */,
 				5C08AEE522FCBC7200AED57B /* RegistrationViewController.swift in Sources */,
-				5C282E3222A4A277007A4E4C /* FreeRideViewController.swift in Sources */,
-				5C23A8B4233168F0004BADBC /* Activity.swift in Sources */,
+				5C282E3222A4A277007A4E4C /* ActivityViewController.swift in Sources */,
+				5C23A8B4233168F0004BADBC /* ActivityModel.swift in Sources */,
 				5C7BFB3F21128E7C004DE4F2 /* AppDelegate.swift in Sources */,
 				5C06D1C0230AE81400F74682 /* ActivitySelectionViewController.swift in Sources */,
-				5C7C39D222DA955E00444733 /* SavedWorkoutsViewController.swift in Sources */,
-				5C282E3422A4A698007A4E4C /* FreeRideViewModel.swift in Sources */,
+				5C7C39D222DA955E00444733 /* SavedActivitiesViewController.swift in Sources */,
+				5C282E3422A4A698007A4E4C /* ActivityViewModel.swift in Sources */,
 				5C23A8B0232D3910004BADBC /* User.swift in Sources */,
 				5C23A8AC2329F842004BADBC /* Parser.swift in Sources */,
 			);
@@ -1030,16 +1010,6 @@
 			);
 			currentVersion = 5C0ED34E230DD8F100F20832 /* FitnessAppDataModel.xcdatamodel */;
 			path = FitnessAppDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		5C7BFB4521128E7C004DE4F2 /* BikeRideApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5C7BFB4621128E7C004DE4F2 /* BikeRideApp.xcdatamodel */,
-			);
-			currentVersion = 5C7BFB4621128E7C004DE4F2 /* BikeRideApp.xcdatamodel */;
-			path = BikeRideApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

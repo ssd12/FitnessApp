@@ -2,7 +2,7 @@
 //  Activity.swift
 import Foundation
 
-struct Activity {
+struct ActivityModel {
     
     let activityID: String
     let activityType: String

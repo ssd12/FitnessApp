@@ -3,9 +3,9 @@ import CoreData
 import UIKit
 import RxSwift
 
-class SavedWorkoutsViewModel {
+class SavedActivitiesViewModel {
     
-    private(set) var activities: [Activity] = [Activity]()
+    private(set) var activities: [ActivityModel] = [ActivityModel]()
     var activitiesReadyForDataSource: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     
     init() {

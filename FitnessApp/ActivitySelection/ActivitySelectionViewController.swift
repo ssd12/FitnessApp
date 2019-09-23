@@ -24,25 +24,25 @@ class ActivitySelectionViewController: UIViewController {
     }
     
     @IBAction func walkButtonpressed(_ sender: Any) {
-        let freeRideVC = FreeRideViewController()
+        let freeRideVC = ActivityViewController()
         freeRideVC.activityType = "Walk"
         self.navigationController?.pushViewController(freeRideVC, animated: true)
     }
     
     @IBAction func bikeButtonPressed(_ sender: Any) {
-        let freeRideVC = FreeRideViewController()
+        let freeRideVC = ActivityViewController()
         freeRideVC.activityType = "Bike"
         self.navigationController?.pushViewController(freeRideVC, animated: true)
     }
  
     @IBAction func runButtonPressed(_ sender: Any) {
-        let freeRideVC = FreeRideViewController()
+        let freeRideVC = ActivityViewController()
         freeRideVC.activityType = "Walk"
         self.navigationController?.pushViewController(freeRideVC, animated: true)
     }
     
     @IBAction func savedActivitesButtonPressed(_ sender: Any) {
-        let savedActivitiesVC = SavedWorkoutsViewController()
+        let savedActivitiesVC = SavedActivitiesViewController()
         self.navigationController?.pushViewController(savedActivitiesVC, animated: true)
     }
     
